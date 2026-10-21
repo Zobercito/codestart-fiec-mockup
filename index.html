@@ -50,6 +50,19 @@
   .anat-line:hover { background-color:#FEF3C7; box-shadow:inset 3px 0 0 #F5B014; }
   .dotgrid { background-image:radial-gradient(#94A3B8 1px, transparent 1px);
              background-size:14px 14px; }
+  /* ---- Storyboard: capa de anotaciones sobre el prototipo real ---- */
+  .sb-layer { pointer-events:none; }
+  .sb-marker {
+    position:absolute; width:26px; height:26px; margin:-13px 0 0 -13px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:9999px; background:#0B62A4; color:#fff;
+    font-size:11px; font-weight:800; line-height:1;
+    box-shadow:0 4px 14px rgba(15,23,42,.45); border:2px solid #fff;
+    cursor:pointer; pointer-events:auto; z-index:5;
+    transition:background-color .15s ease, transform .15s ease;
+  }
+  .sb-marker:hover, .sb-marker:focus-visible { background:#A16207; transform:scale(1.18); outline:none; }
+  .sb-marker.sb-sel { background:#A16207; transform:scale(1.26); }
 </style>
 </head>
 
@@ -105,7 +118,7 @@
     <!-- ─────────────────────────────────────────────────────────── -->
     <!-- PANTALLA A · DASHBOARD DEL ESTUDIANTE                        -->
     <!-- ─────────────────────────────────────────────────────────── -->
-    <section id="scr-dashboard" data-screen class="bg-slate-50">
+    <section id="scr-dashboard" data-screen class="relative bg-slate-50">
 
       <!-- Navbar de la app -->
       <nav class="border-b border-slate-200 bg-white">
@@ -202,7 +215,7 @@
             <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-up-500 text-lg">📌</div>
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-2">
-                <span class="text-[10px] font-extrabold uppercase tracking-wider text-up-700">Tarea asignada por elProf. Alvin Blanco</span>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-up-700">Tarea asignada por el Prof. Alvin Blanco</span>
               </div>
               <div class="mt-0.5 text-sm font-bold text-slate-800">Módulo 4 completo + autoevaluación</div>
               <div class="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600">
@@ -476,12 +489,15 @@
           RF05 / RF06 · Muro de progreso, insignias y estado de cada módulo.
         </p>
       </div>
+    
+      <!-- CAPA DE ANOTACIONES (storyboard) -->
+      <div class="sb-layer absolute inset-0 z-30 hidden" data-sb="scr-dashboard"></div>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────── -->
     <!-- PANTALLA B · LECCIÓN TEÓRICA INTERACTIVA                      -->
     <!-- ─────────────────────────────────────────────────────────── -->
-    <section id="scr-leccion" data-screen class="hidden bg-slate-50">
+    <section id="scr-leccion" data-screen class="relative hidden bg-slate-50">
 
       <nav class="border-b border-slate-200 bg-white">
         <div class="flex flex-wrap items-center gap-3 px-4 py-2.5 sm:px-6">
@@ -728,12 +744,15 @@
           </div>
         </div>
       </div>
+    
+      <!-- CAPA DE ANOTACIONES (storyboard) -->
+      <div class="sb-layer absolute inset-0 z-30 hidden" data-sb="scr-leccion"></div>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────── -->
     <!-- PANTALLA C · EDITOR DE CÓDIGO Y RETOS PRÁCTICOS            -->
     <!-- ─────────────────────────────────────────────────────────── -->
-    <section id="scr-editor" data-screen class="hidden bg-slate-100">
+    <section id="scr-editor" data-screen class="relative hidden bg-slate-100">
       <div class="flex min-h-[860px] flex-col">
 
         <!-- Barra de contexto del reto -->
@@ -951,12 +970,15 @@
           </aside>
         </div>
       </div>
+    
+      <!-- CAPA DE ANOTACIONES (storyboard) -->
+      <div class="sb-layer absolute inset-0 z-30 hidden" data-sb="scr-editor"></div>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────── -->
     <!-- PANTALLA D · PANEL DEL DOCENTE                              -->
     <!-- ─────────────────────────────────────────────────────────── -->
-    <section id="scr-docente" data-screen class="hidden bg-slate-50">
+    <section id="scr-docente" data-screen class="relative hidden bg-slate-50">
 
       <nav class="border-b border-slate-200 bg-white">
         <div class="flex flex-wrap items-center gap-3 px-4 py-2.5 sm:px-6">
@@ -1317,6 +1339,9 @@
           </div>
         </div>
       </div>
+    
+      <!-- CAPA DE ANOTACIONES (storyboard) -->
+      <div class="sb-layer absolute inset-0 z-30 hidden" data-sb="scr-docente"></div>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────── -->
@@ -1985,12 +2010,369 @@
 
       </div>
     </section>
+
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <!-- DOCUMENTACIÓN DE DISEÑO · STORYBOARD                           -->
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <section id="doc-storyboard" data-screen class="hidden bg-slate-50">
+      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-6">
+
+        <header class="border-b border-slate-200 pb-6">
+          <p class="text-xs font-bold uppercase tracking-wider text-fiec-600">Documentación de diseño · Avance 2</p>
+          <h1 class="mt-1 text-3xl font-extrabold tracking-tight text-slate-900">Storyboard</h1>
+          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            Ficha de cada pantalla: qué hace, quién la usa, qué necesita y qué pasa cuando algo
+            falla. El storyboard no es un dibujo aparte: es <strong class="font-semibold text-slate-700">el
+            prototipo real anotado</strong>. Cada ficha abre su pantalla con los marcadores puestos,
+            de modo que la documentación y el diseño no pueden separarse.
+          </p>
+          <div class="mt-4 flex flex-wrap items-center gap-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-up-50 text-lg">▤</span>
+            <p class="min-w-0 flex-1 text-[12.5px] leading-relaxed text-slate-600">
+              Pulsa <strong class="font-semibold text-slate-700">«Abrir pantalla anotada»</strong> en
+              cualquier ficha. Aparecerán los marcadores de letra sobre la pantalla y, al pulsar
+              uno, su anotación en un panel lateral. Se cierra con
+              <kbd class="mono rounded border border-slate-300 bg-slate-50 px-1.5 py-0.5 text-[10px] text-slate-700">Esc</kbd>.
+            </p>
+          </div>
+        </header>
+
+        <!-- ══ FICHA · A ══ -->
+        <article class="mt-8 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+          <div class="flex flex-wrap items-center gap-3 border-b border-slate-200 bg-slate-50 px-5 py-4">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-fiec-600 text-sm font-extrabold text-white">A</span>
+            <div class="min-w-0 flex-1">
+              <h2 class="text-base font-extrabold tracking-tight text-slate-900">Dashboard del estudiante</h2>
+              <p class="text-[12px] text-slate-500">Panel del curso · ruta de 8 módulos · tareas · medallas</p>
+            </div>
+            <button onclick="openStoryboard('scr-dashboard')" class="rounded-lg bg-fiec-600 px-3.5 py-2 text-[12px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla anotada →</button>
+          </div>
+
+          <div class="grid gap-5 p-5 lg:grid-cols-3">
+            <dl class="space-y-3 text-[12.5px]">
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Objetivo</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Que el estudiante sepa, sin buscar nada, en qué módulo está, qué le falta y qué tiene pendiente.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Actor</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Estudiante de primer ingreso, 17-22 años, con grupo heterogéneo en conocimientos previos.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Precondición</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Sesión iniciada y matrícula en un grupo con código de inscripción.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Datos que consume</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Progreso por módulo, asignaciones vigentes, insignias, racha y número de retos superados.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Requisitos</dt>
+                <dd class="mt-0.5 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF02</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF05</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF06</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF13</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Interacciones</h3>
+              <div class="mt-2 overflow-x-auto">
+                <table class="w-full min-w-[520px] text-left text-[12px]">
+                  <thead>
+                    <tr class="border-b border-slate-300">
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Elemento</th>
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Acción</th>
+                      <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Respuesta del sistema</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Continuar módulo 4</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Abre la lección en la que se quedó</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Ver mis tareas pendientes</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Filtra la ruta de módulos por asignación</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Tarjeta de módulo</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Abre el módulo; si está bloqueado, explica por qué</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Continuar tarea</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Abre la tarea asignada con su fecha límite</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Insignia</td><td class="py-1.5 pr-3 text-slate-600">Clic / hover</td><td class="py-1.5 text-slate-600">Muestra cómo se obtuvo y cuándo</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Racha</td><td class="py-1.5 pr-3 text-slate-600">Hover</td><td class="py-1.5 text-slate-600">Explica que la racha se conserva con una actividad diaria</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 class="mt-4 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estados alternos</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="rounded-lg bg-coder-100 px-2.5 py-1.5 text-[11px] font-bold text-coder-700 ring-1 ring-coder-200">Sin tareas asignadas</span>
+                <span class="rounded-lg bg-up-50 px-2.5 py-1.5 text-[11px] font-bold text-up-800 ring-1 ring-up-200">Tarea vencida</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Curso sin empezar</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Módulo recién desbloqueado</span>
+                <span class="rounded-lg bg-red-50 px-2.5 py-1.5 text-[11px] font-bold text-red-700 ring-1 ring-red-200">Sin conexión</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ FICHA · B ══ -->
+        <article class="mt-5 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+          <div class="flex flex-wrap items-center gap-3 border-b border-slate-200 bg-slate-50 px-5 py-4">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-fiec-600 text-sm font-extrabold text-white">B</span>
+            <div class="min-w-0 flex-1">
+              <h2 class="text-base font-extrabold tracking-tight text-slate-900">Lección interactiva</h2>
+              <p class="text-[12px] text-slate-500">Modo clase · video · animación del proceso · simulador de memoria · anatomía del código</p>
+            </div>
+            <button onclick="openStoryboard('scr-leccion')" class="rounded-lg bg-fiec-600 px-3.5 py-2 text-[12px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla anotada →</button>
+          </div>
+
+          <div class="grid gap-5 p-5 lg:grid-cols-3">
+            <dl class="space-y-3 text-[12.5px]">
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Objetivo</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Que el estudiante comprenda <em>por qué</em> el código es como es: qué hace cada línea, qué es la memoria y qué ocurre al ejecutar.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Actor</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Estudiante, y docente proyectando la misma vista en clase.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Precondición</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Módulo desbloqueado. El modo clase no requiere sesión iniciada: puede proyectarse sin cuenta.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Datos que consume</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Contenido de la lección (Markdown con componentes incrustados), progreso de la lección y estado del video.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Requisitos</dt>
+                <dd class="mt-0.5 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF03</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF09</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF16</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Interacciones</h3>
+              <div class="mt-2 overflow-x-auto">
+                <table class="w-full min-w-[520px] text-left text-[12px]">
+                  <thead>
+                    <tr class="border-b border-slate-300">
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Elemento</th>
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Acción</th>
+                      <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Respuesta del sistema</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Línea de código</td><td class="py-1.5 pr-3 text-slate-600">Hover / toque</td><td class="py-1.5 text-slate-600">Explica qué hace y por qué está</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Etapa de la animación</td><td class="py-1.5 pr-3 text-slate-600">Hover / toque</td><td class="py-1.5 text-slate-600">Detalla la etapa y su analogía</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Casillero de memoria</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Muestra dirección, tipo y valor</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Ejecutar línea</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Avanza una instrucción y actualiza la memoria</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Modo clase</td><td class="py-1.5 pr-3 text-slate-600">Interruptor</td><td class="py-1.5 text-slate-600">Amplía el texto y oculta las soluciones</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Anterior / Ir al reto</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Navega entre lecciones y de la lección al reto</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 class="mt-4 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estados alternos</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="rounded-lg bg-fiec-50 px-2.5 py-1.5 text-[11px] font-bold text-fiec-700 ring-1 ring-fiec-200">Modo clase activo</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Lección ya vista</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Video no disponible</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Última lección del módulo</span>
+                <span class="rounded-lg bg-red-50 px-2.5 py-1.5 text-[11px] font-bold text-red-700 ring-1 ring-red-200">Contenido sin cargar</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ FICHA · C ══ -->
+        <article class="mt-5 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+          <div class="flex flex-wrap items-center gap-3 border-b border-slate-200 bg-slate-50 px-5 py-4">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-fiec-600 text-sm font-extrabold text-white">C</span>
+            <div class="min-w-0 flex-1">
+              <h2 class="text-base font-extrabold tracking-tight text-slate-900">Editor de retos</h2>
+              <p class="text-[12px] text-slate-500">Editor con casos de prueba · pistas progresivas · salida aislada · diagnóstico del error</p>
+            </div>
+            <button onclick="openStoryboard('scr-editor')" class="rounded-lg bg-fiec-600 px-3.5 py-2 text-[12px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla anotada →</button>
+          </div>
+
+          <div class="grid gap-5 p-5 lg:grid-cols-3">
+            <dl class="space-y-3 text-[12.5px]">
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Objetivo</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Que el estudiante escriba código y entienda en qué falla, no solo que falla.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Actor</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Estudiante. Es la pantalla donde más tiempo va a pasar.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Precondición</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Lección anterior vista. El reto se abre desde la lección o desde la tarea asignada.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Datos que consume</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Enunciado, casos de prueba, pistas, reglas de validación y el código guardado del estudiante.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Requisitos</dt>
+                <dd class="mt-0.5 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF04</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF10</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF11</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Interacciones</h3>
+              <div class="mt-2 overflow-x-auto">
+                <table class="w-full min-w-[520px] text-left text-[12px]">
+                  <thead>
+                    <tr class="border-b border-slate-300">
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Elemento</th>
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Acción</th>
+                      <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Respuesta del sistema</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Verificar solución</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Ejecuta los casos de prueba y muestra el resultado</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Editor</td><td class="py-1.5 pr-3 text-slate-600">Escribir</td><td class="py-1.5 text-slate-600">Autoguardado y sugerencias de sintaxis</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Revelar pista</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Muestra la pista y descuenta los puntos</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Autocompletado</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Inserta el fragmento en la posición del cursor</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Salida / Retroalimentación</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Cambia entre la salida del programa y el análisis del error</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Reiniciar</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Restaura el código inicial; pide confirmación</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 class="mt-4 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estados alternos</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="rounded-lg bg-coder-100 px-2.5 py-1.5 text-[11px] font-bold text-coder-700 ring-1 ring-coder-200">Todos los casos aprobados</span>
+                <span class="rounded-lg bg-red-50 px-2.5 py-1.5 text-[11px] font-bold text-red-700 ring-1 ring-red-200">Error de sintaxis</span>
+                <span class="rounded-lg bg-red-50 px-2.5 py-1.5 text-[11px] font-bold text-red-700 ring-1 ring-red-200">Bucle infinito (corta a los 5 s)</span>
+                <span class="rounded-lg bg-up-50 px-2.5 py-1.5 text-[11px] font-bold text-up-800 ring-1 ring-up-200">Sin intentos disponibles</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Reto ya aprobado</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ FICHA · D ══ -->
+        <article class="mt-5 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+          <div class="flex flex-wrap items-center gap-3 border-b border-slate-200 bg-slate-50 px-5 py-4">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-fiec-600 text-sm font-extrabold text-white">D</span>
+            <div class="min-w-0 flex-1">
+              <h2 class="text-base font-extrabold tracking-tight text-slate-900">Panel docente</h2>
+              <p class="text-[12px] text-slate-500">Grupos · seguimiento por estudiante · errores frecuentes · próxima acción</p>
+            </div>
+            <button onclick="openStoryboard('scr-docente')" class="rounded-lg bg-fiec-600 px-3.5 py-2 text-[12px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla anotada →</button>
+          </div>
+
+          <div class="grid gap-5 p-5 lg:grid-cols-3">
+            <dl class="space-y-3 text-[12.5px]">
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Objetivo</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Que el docente sepa a quién reforzar en la siguiente clase, con evidencia, y pueda asignar el trabajo siguiente.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Actor</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Docente del propedéutico, con uno o varios grupos a su cargo.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Precondición</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Sesión iniciada con rol docente. Solo ve los grupos que le pertenecen.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Datos que consume</dt>
+                <dd class="mt-0.5 leading-relaxed text-slate-700">Inscripciones, asignaciones, estado de cada estudiante e intentos con el error detectado.</dd>
+              </div>
+              <div>
+                <dt class="font-extrabold uppercase tracking-wider text-slate-500">Requisitos</dt>
+                <dd class="mt-0.5 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF07</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF12</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF14</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-fiec-200">RF15</span>
+                </dd>
+              </div>
+            </dl>
+
+            <div class="lg:col-span-2">
+              <h3 class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Interacciones</h3>
+              <div class="mt-2 overflow-x-auto">
+                <table class="w-full min-w-[520px] text-left text-[12px]">
+                  <thead>
+                    <tr class="border-b border-slate-300">
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Elemento</th>
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Acción</th>
+                      <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Respuesta del sistema</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Asignar módulo</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Publica la asignación con fecha de entrega</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Ver detalle</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Abre los intentos y los errores del estudiante</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Pestañas</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Cambia entre cumplimiento, aciertos y errores</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Filtro</td><td class="py-1.5 pr-3 text-slate-600">Seleccionar</td><td class="py-1.5 text-slate-600">Filtra la tabla por estado del estudiante</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Copiar código</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Copia el código de inscripción al portapapeles</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Asignar refuerzo</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Crea una tarea a partir del error dominante</td></tr>
+                    <tr><td class="py-1.5 pr-3 font-semibold text-slate-700">Exportar CSV</td><td class="py-1.5 pr-3 text-slate-600">Clic</td><td class="py-1.5 text-slate-600">Descarga el reporte de la asignación</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3 class="mt-4 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estados alternos</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Grupo sin estudiantes</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Sin datos todavía</span>
+                <span class="rounded-lg bg-up-50 px-2.5 py-1.5 text-[11px] font-bold text-up-800 ring-1 ring-up-200">Asignación vencida</span>
+                <span class="rounded-lg bg-coder-100 px-2.5 py-1.5 text-[11px] font-bold text-coder-700 ring-1 ring-coder-200">Grupo completo</span>
+                <span class="rounded-lg bg-slate-100 px-2.5 py-1.5 text-[11px] font-bold text-slate-600 ring-1 ring-slate-200">Varias secciones</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ NOTA ══ -->
+        <p class="mt-6 rounded-2xl bg-fiec-50 p-5 text-[12.5px] leading-relaxed text-fiec-900 ring-1 ring-fiec-200">
+          <strong>Por qué el storyboard va anotado sobre el prototipo y no dibujado aparte.</strong> Un
+          storyboard en papel se queda viejo en cuanto cambia una pantalla: nadie lo vuelve a
+          actualizar. Al anclar cada anotación al elemento real, el documento se regenera solo. Es
+          además la forma en que se puede verificar que cada requisito listado en el Avance 1 tiene
+          un lugar concreto en la interfaz, que es lo que pide el calendario al entregar el avance.
+        </p>
+
+      </div>
+    </section>
   </div>
 
   <p class="mx-auto max-w-[1500px] px-4 py-6 text-center text-[11px] leading-relaxed text-slate-600">
     Mockup de diseño · CodeStart FIEC — Universidad de Panamá, Facultad de Informática, Electrónica y Comunicación.<br>
     Tipografía: Inter (texto) + JetBrains Mono (código) · Paleta: FIEC #0B62A4 · UP #F5B014 · Éxito #10B981 · Error #EF4444.
   </p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     STORYBOARD — panel de anotacion sobre el prototipo real
+     ═══════════════════════════════════════════════════════════════ -->
+<div id="sbPanel" class="fixed bottom-4 right-4 z-[70] hidden w-[min(23rem,calc(100vw-2rem))] overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-slate-300">
+  <div class="flex items-start gap-3 border-b border-slate-200 bg-slate-50 p-4">
+    <span id="sbLetra" class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-fiec-600 text-xs font-extrabold text-white">A</span>
+    <div class="min-w-0 flex-1">
+      <p id="sbTitulo" class="text-sm font-bold leading-snug text-slate-900">—</p>
+      <p id="sbRf" class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">—</p>
+    </div>
+    <button id="sbCerrar" class="shrink-0 rounded-lg p-1 text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" aria-label="Cerrar anotación">✕</button>
+  </div>
+  <p id="sbDesc" class="p-4 text-[12.5px] leading-relaxed text-slate-600">—</p>
+</div>
+
+<div id="sbBanner" class="fixed bottom-4 left-4 z-[70] hidden max-w-[min(20rem,calc(100vw-2rem))] items-center gap-3 rounded-2xl bg-slate-900 px-4 py-3 text-white shadow-2xl ring-1 ring-slate-700">
+  <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-up-500 text-xs font-extrabold text-slate-900">▤</span>
+  <p class="text-[12px] leading-snug">
+    <strong class="font-extrabold">Modo storyboard.</strong>
+    Pulsa una letra sobre la pantalla para leer su anotación.
+  </p>
+  <button id="sbSalir" class="shrink-0 rounded-lg bg-white/10 px-2.5 py-1.5 text-[11px] font-bold text-white transition hover:bg-white/20">Salir</button>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════
@@ -2093,6 +2475,187 @@ function closeModal() {
   m.classList.add('hidden'); m.classList.remove('flex');
 }
 document.getElementById('modalLogro').addEventListener('click', e => { if (e.target.id === 'modalLogro') closeModal(); });
+
+/* ═══════════════════════════════════════════════════════════════
+   STORYBOARD — el storyboard ES el prototipo real, anotado.
+   Los marcadores se anclan al elemento por su texto, de modo que
+   siempre apuntan a lo correcto aunque el layout cambie.
+   ═══════════════════════════════════════════════════════════════ */
+const SB = {
+  datos: {
+    'scr-dashboard': [
+      { id:'A', a:'CodeStart ', t:'Marca institucional', rf:'—',
+        d:'Los escudos de la Universidad de Panamá y de la FIEC, y la marca de la plataforma. Fija a la izquierda en todas las pantallas: identifica dónde está el estudiante siempre.' },
+      { id:'B', a:'Módulos', t:'Navegación principal', rf:'RF02',
+        d:'Tres destinos: módulos (dónde está el contenido), tareas (lo que asignó el docente) y medallas (lo conseguido). Aquí son texto; en la aplicación serán enlaces.' },
+      { id:'C', sel:'div.rounded-full.bg-amber-50', t:'Racha de actividad', rf:'RF06',
+        d:'Días consecutivos con actividad. Es el único dato que la plataforma tiene del estudiante antes de que abra un módulo, y el que más la devuelve.' },
+      { id:'D', a:'Julieth Rojas', t:'Identidad y rol', rf:'RF01',
+        d:'Avatar con iniciales, nombre y rol. El rol decide qué se muestra: un docente no ve el botón «Continuar módulo».' },
+      { id:'E', a:'¡Hola, Julieth!', t:'Saludo con estado', rf:'RF06',
+        d:'No es un saludo decorativo: dice en qué módulo está y cuánto le falta. Responde «¿dónde voy?» sin que el estudiante tenga que buscarlo.' },
+      { id:'F', a:'Continuar módulo 4', t:'Acción principal', rf:'RF02',
+        d:'Una sola acción primaria por pantalla. Continúa donde quedó, no donde le convenga al sistema.' },
+      { id:'G', a:'Avance global del curso', t:'Progreso global', rf:'RF06',
+        d:'Anillo con el porcentaje del curso, los módulos completados y tres contadores: racha, medallas y retos superados. Responde «¿voy bien?».' },
+      { id:'H', a:'Tarea asignada por el Prof.', t:'Tarea asignada', rf:'RF13',
+        d:'Lo que el docente asignó, con fecha de entrega, días restantes y avance propio. Va sobre la ruta de módulos porque es lo urgente.' },
+      { id:'I', a:'Ruta de módulos', t:'Ruta de módulos', rf:'RF02',
+        d:'Los ocho módulos del curso con su estado. Es a la vez el mapa del curso y el índice del contenido.' },
+      { id:'J', a:'Variables, tipos de datos y operadores', t:'Módulo en progreso', rf:'RF02',
+        d:'El módulo activo se distingue por el anillo de color y un botón «Seguir aquí». Solo un módulo puede estar en progreso a la vez.' },
+      { id:'K', a:'Estructuras de control de flujo', t:'Módulo bloqueado', rf:'RF02',
+        d:'Los módulos siguientes se muestran pero no se abren: el estudiante ve hacia dónde va. Se desbloquean al completar el anterior.' },
+      { id:'L', a:'Mis medallas', tag:'h2', t:'Muro de progreso', rf:'RF06',
+        d:'Las insignias obtenidas y las que faltan. Enseña el camino que queda, no solo lo ya hecho.' }
+    ],
+    'scr-leccion': [
+      { id:'A', a:'Modo clase', t:'Modo clase', rf:'RF16',
+        d:'Convierte la lección en una vista para proyectar: texto ampliado y sin soluciones visibles, para que el docente pueda leerla junto con el grupo.' },
+      { id:'B', a:'¿Qué pasa cuando ejecutamos', t:'Título de la lección', rf:'RF09',
+        d:'Una pregunta, no un tema. «¿Qué pasa cuando ejecutamos un programa?» es lo que la lección responde.' },
+      { id:'C', a:'Ir al reto', t:'Navegación de la lección', rf:'RF02',
+        d:'Anterior, progreso del módulo y «Ir al reto». Toda lección desemboca en una práctica.' },
+      { id:'D', a:'Video 2.1', t:'Video', rf:'RF09',
+        d:'Un video corto (2 a 4 minutos) con subtítulos en español que complementa el texto sin sustituirlo. Si el video no carga, la lección sigue siendo válida.' },
+      { id:'E', a:'Anatomía de un programa', t:'Visor de anatomía', rf:'RF03',
+        d:'El corazón de la lección: cada línea del programa se explica al pasar el cursor. Ataca el problema de fondo, la sintaxis que parece arbitraria.' },
+      { id:'F', a:'* Lenguaje de ejemplo', t:'Nota del lenguaje', rf:'§15.3',
+        d:'El lenguaje de ejemplo (C) es provisional: lo define el docente del propedéutico. El diseño de los retos guarda las reglas como datos, así que no depende de esa decisión.' },
+      { id:'G', a:'El recorrido de una instrucción', t:'Animación del proceso', rf:'RF03',
+        d:'Código fuente, traducción, memoria y salida. Cuatro etapas que se recorren con el cursor.' },
+      { id:'H', a:'Simulador de memoria', t:'Simulador de memoria', rf:'RF03',
+        d:'La memoria como casilleros numerados, con el estado actual de cada variable. Es la respuesta directa a «no entiendo qué es una variable».' },
+      { id:'I', a:'Ejecutar línea', t:'Ejecución paso a paso', rf:'RF03',
+        d:'Avanzar una instrucción cada vez, para que el estudiante pueda predecir el resultado antes de continuar.' },
+      { id:'J', a:'Practicar ahora', t:'Salto a la práctica', rf:'RF10',
+        d:'El cierre de la lección: pasar al reto sobre el mismo tema, sin perder el contexto.' }
+    ],
+    'scr-editor': [
+      { id:'A', a:'Reto 2 · Clasifica', t:'Encabezado del reto', rf:'RF04',
+        d:'Qué hay que hacer, en una frase, y en qué módulo y lección está. El objetivo de la práctica se repite en tres sitios: enunciado, salida y resultado.' },
+      { id:'B', a:'Intento 2 de 3', t:'Contador de intentos', rf:'RF11',
+        d:'El estudiante sabe cuántas veces ha intentado y cuántas pistas ha usado. La información reduce la frustración.' },
+      { id:'C', a:'Casos de prueba', t:'Casos de prueba', rf:'RF10',
+        d:'Los casos con su estado. Un caso que todavía no se ha ejecutado se ve como pendiente, no como fallido.' },
+      { id:'D', a:'Pista 1 · Abierta', t:'Pistas progresivas', rf:'RF04',
+        d:'La primera pista es abierta y gratuita; la segunda cuesta diez puntos. Que el estudiante llegue solo vale más que la respuesta.' },
+      { id:'E', a:'Autoguardado · RF11', t:'Autoguardado', rf:'RF11',
+        d:'El código se guarda solo. El estudiante nunca debe dudar de si su trabajo se perdió.' },
+      { id:'F', a:'Verificar solución', t:'Verificar', rf:'RF10',
+        d:'El botón que dispara la validación. Es el momento más importante de la pantalla, y por eso va destacado en verde.' },
+      { id:'G', a:'Línea 6 · Lógica', t:'Diagnóstico del error', rf:'RF15',
+        d:'No dice «código incorrecto»: dice qué esperaba, qué obtuvo y por qué. Este dato es el que después ve el docente en su panel.' },
+      { id:'H', sel:'[data-tab="salida"]', t:'Salida y retroalimentación', rf:'RF10',
+        d:'Dos pestañas: lo que imprimió el programa y el análisis del error. La validación ocurre en el navegador, dentro de un Web Worker.' },
+      { id:'I', a:'Repasa la lección', t:'Repaso de la lección', rf:'RF04',
+        d:'El fragmento de sintaxis del reto, siempre a mano. No obliga a salir de la pantalla para recordar una regla.' }
+    ],
+    'scr-docente': [
+      { id:'A', a:'Sección 1 · Verano 2026', tag:'h1', t:'Grupo y periodo', rf:'RF12',
+        d:'El docente trabaja siempre sobre un grupo. El selector de sección y el código de inscripción conviven en la misma barra.' },
+      { id:'B', a:'FIEC-V26-8QK4', t:'Código de inscripción', rf:'RF12',
+        d:'El código con el que el estudiante se une. Se copia con un clic, para que el docente lo comparta por el canal que use.' },
+      { id:'C', a:'Modo clase / proyectar', t:'Modo clase desde el panel', rf:'RF16',
+        d:'El docente abre el módulo en modo clase sin salir del panel.' },
+      { id:'D', a:'+ Asignar módulo', t:'Asignar', rf:'RF13',
+        d:'Asignar un módulo o un reto a un grupo, con fecha de entrega. Es la acción que dispara el trabajo del estudiante.' },
+      { id:'E', a:'Cumplimiento', t:'Indicadores del grupo', rf:'RF14',
+        d:'Cuatro cifras: cuántos completaron, la tasa de acierto, cuántos están atrasados y el punto crítico del grupo. Responden «¿cómo va la clase?».' },
+      { id:'F', a:'Punto crítico', t:'Punto crítico', rf:'RF15',
+        d:'El error que más se repite en el grupo, con la tasa y el número de estudiantes afectados. Es la información que el docente necesita para decidir qué reforzar en la siguiente clase.' },
+      { id:'G', a:'Asignación: Módulo 4', t:'Seguimiento por asignación', rf:'RF14',
+        d:'El estado de cada estudiante frente a la asignación: sin iniciar, en progreso, completado o atrasado, con su avance y su último reto.' },
+      { id:'H', a:'Julieth Rojas', t:'Detalle del estudiante', rf:'RF14',
+        d:'Abre los intentos del estudiante: qué respondió, en qué falló y cuántas veces lo intentó.' },
+      { id:'I', a:'Errores más frecuentes', t:'Errores por reto', rf:'RF15',
+        d:'La tasa de acierto de cada reto del módulo, con el patrón de error dominante y cuántas respuestas lo confirman.' },
+      { id:'J', a:'Próxima acción sugerida', t:'Próxima acción', rf:'RF07',
+        d:'La plataforma propone la acción siguiente: reforzar un tema concreto o proyectar una lección. La decisión sigue siendo del docente.' }
+    ]
+  },
+
+  sec: null,
+
+  /* busca el elemento mas especifico cuyo texto propio contenga el ancla */
+  ancla(txt, tag, sel) {
+    if (sel) return this.sec.querySelector(sel);
+    const cands = [];
+    this.sec.querySelectorAll('*').forEach(el => {
+      if (tag && el.tagName.toLowerCase() !== tag) return;
+      for (const n of el.childNodes) {
+        if (n.nodeType === 3 && n.textContent.indexOf(txt) !== -1) { cands.push(el); break; }
+      }
+    });
+    if (!cands.length) return null;
+    const area = el => { const r = el.getBoundingClientRect(); return r.width * r.height; };
+    cands.sort((a, b) => area(a) - area(b));
+    return cands[0];
+  },
+
+  render(id) {
+    this.sec = document.getElementById(id);
+    if (!this.sec) return;
+    const capa = this.sec.querySelector('[data-sb]');
+    if (!capa) return;
+    capa.innerHTML = '';
+    const sr = this.sec.getBoundingClientRect();
+    (this.datos[id] || []).forEach(m => {
+      const el = this.ancla(m.a, m.tag, m.sel);
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      let x = r.left - sr.left - 20;
+      if (x < 6) x = r.left - sr.left + r.width + 20;
+      const y = r.top - sr.top + r.height / 2;
+      const b = document.createElement('button');
+      b.className = 'sb-marker';
+      b.style.left = x + 'px';
+      b.style.top = y + 'px';
+      b.textContent = m.id;
+      b.setAttribute('aria-label', 'Anotación ' + m.id + ': ' + m.t);
+      b.addEventListener('click', ev => { ev.stopPropagation(); this.abrir(m, b); });
+      capa.appendChild(b);
+    });
+    capa.classList.remove('hidden');
+  },
+
+  abrir(m, btn) {
+    document.querySelectorAll('.sb-marker.sb-sel').forEach(x => x.classList.remove('sb-sel'));
+    if (btn) btn.classList.add('sb-sel');
+    document.getElementById('sbLetra').textContent = m.id;
+    document.getElementById('sbTitulo').textContent = m.t;
+    document.getElementById('sbRf').textContent = m.rf;
+    document.getElementById('sbDesc').textContent = m.d;
+    document.getElementById('sbPanel').classList.remove('hidden');
+  },
+
+  cerrar() { document.getElementById('sbPanel').classList.add('hidden'); }
+};
+
+function setStoryboard(on) {
+  const b = document.getElementById('sbBanner');
+  if (!on) {
+    document.body.removeAttribute('data-sb');
+    b.classList.add('hidden');
+    b.classList.remove('flex');
+    document.querySelectorAll('.sb-layer').forEach(l => l.classList.add('hidden'));
+    SB.cerrar();
+    return;
+  }
+  document.body.setAttribute('data-sb', 'on');
+  b.classList.remove('hidden');
+  b.classList.add('flex');
+}
+
+function openStoryboard(id) {
+  showScreen(id, null);
+  setStoryboard(true);
+  SB.render(id);
+  setTimeout(() => SB.render(id), 80);   /* segunda pasada tras el scroll suave */
+}
+document.getElementById('sbCerrar').addEventListener('click', () => SB.cerrar());
+document.getElementById('sbSalir').addEventListener('click', () => setStoryboard(false));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') { SB.cerrar(); setStoryboard(false); } });
 </script>
 
 </body>
