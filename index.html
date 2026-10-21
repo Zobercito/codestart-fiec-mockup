@@ -2642,6 +2642,310 @@
 
       </div>
     </section>
+
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <!-- DOCUMENTACIÓN DE DISEÑO · VALIDACIÓN CON USUARIOS             -->
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <section id="doc-validacion" data-screen class="hidden bg-slate-50">
+      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-6">
+
+        <header class="border-b border-slate-200 pb-6">
+          <p class="text-xs font-bold uppercase tracking-wider text-fiec-600">Documentación de diseño · Avance 2</p>
+          <h1 class="mt-1 text-3xl font-extrabold tracking-tight text-slate-900">Validación con usuarios</h1>
+          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            El calendario del Avance 2 pide el prototipo <em>validado con usuarios</em>. Aquí queda
+            el protocolo: quién participa, qué hace, con qué se mide y qué se considera aprobado.
+            La prueba se ejecuta con un grupo piloto en la siguiente fase.
+          </p>
+        </header>
+
+        <!-- estado -->
+        <div class="mt-6 flex flex-wrap items-center gap-4 rounded-2xl bg-up-50 p-5 ring-1 ring-up-200">
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-up-500 text-lg">⏳</span>
+          <div class="min-w-0 flex-1">
+            <p class="text-sm font-extrabold text-up-900">Estado: protocolo preparado, ejecución pendiente</p>
+            <p class="mt-0.5 text-[12.5px] leading-relaxed text-up-900/90">
+              La prueba de usabilidad se realiza con el grupo piloto, después de la entrega del
+              Avance 3. Los resultados se vuelcan en la tabla de la bitácora de hallazgos, en esta
+              misma sección.
+            </p>
+          </div>
+        </div>
+
+        <!-- por qué -->
+        <section class="mt-8 grid gap-4 lg:grid-cols-3">
+          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Por qué hay que validar</h2>
+            <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+              El calendario del avance 2 lista «prototipo validado con usuarios» como parte del
+              entregable, y el Avance 1 fija dos criterios que solo se pueden cumplir así.
+            </p>
+            <ul class="mt-3 space-y-2 text-[12px] leading-relaxed text-slate-600">
+              <li class="rounded-lg bg-slate-50 p-2.5 ring-1 ring-slate-200">
+                <strong class="font-semibold text-slate-700">RNF04</strong> · Usabilidad: «calificación
+                promedio superior a 8/10 en encuesta de usabilidad».
+              </li>
+              <li class="rounded-lg bg-slate-50 p-2.5 ring-1 ring-slate-200">
+                <strong class="font-semibold text-slate-700">§21</strong> · Criterio de éxito
+                «Usabilidad: calificación superior a 8/10».
+              </li>
+              <li class="rounded-lg bg-slate-50 p-2.5 ring-1 ring-slate-200">
+                <strong class="font-semibold text-slate-700">§22</strong> · El prototipo no sustituye al
+                docente: la validación comprueba que refuerza su clase y no la estorba.
+              </li>
+            </ul>
+          </article>
+
+          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Participantes</h2>
+            <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+              Entre 5 y 8 personas. Con menos de 5 no se puede distinguir un problema de diseño de
+              un comentario aislado; con más de 8 el tiempo de la prueba deja de ser asumible para
+              el equipo de cuatro.
+            </p>
+            <ul class="mt-3 space-y-2 text-[12px] leading-relaxed text-slate-600">
+              <li class="flex gap-2"><span class="text-fiec-600">·</span><span><strong class="font-semibold text-slate-700">3-4 compañeros de equipo</strong> que no construyeron el prototipo y no lo han visto antes.</span></li>
+              <li class="flex gap-2"><span class="text-fiec-600">·</span><span><strong class="font-semibold text-slate-700">3-4 estudiantes</strong> de primer ingreso, o de otra asignatura de primer año, que nunca han usado la plataforma.</span></li>
+              <li class="flex gap-2"><span class="text-fiec-600">·</span><span><strong class="font-semibold text-slate-700">1 docente</strong> del propedéutico, que lo usará proyectado en clase. Se evalúa aparte: la prueba docente tiene criterios propios.</span></li>
+            </ul>
+            <p class="mt-3 rounded-xl bg-fiec-50 p-3 text-[11.5px] leading-relaxed text-fiec-900 ring-1 ring-fiec-200">
+              El perfil de los estudiantes debe reflejar el del grupo real: heterogéneo en
+              conocimientos previos de programación, que es la característica central del
+              problema (§2.1).
+            </p>
+          </article>
+
+          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Cómo se registra</h2>
+            <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+              Sesión de 25 minutos por participante, en el navegador del propio usuario (el
+              prototipo es un archivo estático, no hace falta instalar nada).
+            </p>
+            <ol class="mt-3 space-y-2 text-[12px] leading-relaxed text-slate-600">
+              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">1</span><span>Lectura del guion de la tarea, en voz alta.</span></li>
+              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">2</span><span>El participante hace la tarea sin ayuda. <strong class="font-semibold text-slate-700">No se le corrige</strong>: se anota dónde se detiene.</span></li>
+              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">3</span><span>Al terminar, se responden las preguntas de la encuesta.</span></li>
+              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">4</span><span>Se registra la observación en la bitácora de hallazgos.</span></li>
+            </ol>
+          </article>
+        </section>
+
+        <!-- tareas -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">Tareas</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Cuatro tareas que cubren las cuatro pantallas. Cada una tiene un objetivo de la tarea
+            real, no de la interfaz: importa lo que la persona quiere conseguir, no lo que la
+            aplicación hace.
+          </p>
+
+          <div class="mt-5 space-y-4">
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-fiec-600 text-xs font-extrabold text-white">T1</span>
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-sm font-extrabold text-slate-900">«¿En qué parte del curso estás y qué te falta?»</h3>
+                  <p class="text-[12px] text-slate-500">Pantalla A · dashboard del estudiante</p>
+                </div>
+                <span class="rounded-md bg-coder-100 px-2 py-1 text-[10px] font-bold text-coder-700 ring-1 ring-coder-200">Objetivo: RF02 · RF06</span>
+              </div>
+              <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+                «Estás entrando a la plataforma. Dime en qué módulo vas, qué te falta para terminarlo
+                y qué tienes pendiente del profesor.»
+              </p>
+              <p class="mt-2 text-[12px] leading-relaxed text-slate-500">
+                <strong class="font-semibold text-slate-700">Se mide:</strong> si localiza el módulo en
+                curso, si encuentra la tarea asignada y si entiende el 43 % del anillo. Si pide
+                ayuda para cualquiera de las tres, es un fallo de la pantalla A.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-fiec-600 text-xs font-extrabold text-white">T2</span>
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-sm font-extrabold text-slate-900">«¿Qué hace esta línea de código y por qué está ahí?»</h3>
+                  <p class="text-[12px] text-slate-500">Pantalla B · lección interactiva</p>
+                </div>
+                <span class="rounded-md bg-coder-100 px-2 py-1 text-[10px] font-bold text-coder-700 ring-1 ring-coder-200">Objetivo: RF03</span>
+              </div>
+              <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+                «Esta lección explica un programa. Mira las líneas de código y explícame qué hace
+                la línea que dice <code class="mono">printf</code>.»
+              </p>
+              <p class="mt-2 text-[12px] leading-relaxed text-slate-500">
+                <strong class="font-semibold text-slate-700">Se mide:</strong> si descubre que la
+                explicación aparece al pasar el cursor, si entiende la respuesta y si la
+                relaciona con la salida del programa. Esta es la tarea que valida la idea central
+                del proyecto: explicar el <em>porqué</em> de cada línea.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-fiec-600 text-xs font-extrabold text-white">T3</span>
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-sm font-extrabold text-slate-900">«Tu solución no funciona. ¿Qué le vas a cambiar?»</h3>
+                  <p class="text-[12px] text-slate-500">Pantalla C · editor de retos</p>
+                </div>
+                <span class="rounded-md bg-coder-100 px-2 py-1 text-[10px] font-bold text-coder-700 ring-1 ring-coder-200">Objetivo: RF04 · RF15</span>
+              </div>
+              <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+                «Verifica la solución. No es correcta. Dime qué está mal y qué vas a modificar en el
+                código.»
+              </p>
+              <p class="mt-2 text-[12px] leading-relaxed text-slate-500">
+                <strong class="font-semibold text-slate-700">Se mide:</strong> si encuentra el
+                diagnóstico del error, si entiende qué esperaba el caso de prueba y si decide
+                <em>modificar el código</em> y no solo volver a intentarlo. Si pide una pista antes
+                de leer el diagnóstico, se anota como problema de jerarquía de la información.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-fiec-600 text-xs font-extrabold text-white">T4</span>
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-sm font-extrabold text-slate-900">«¿A quién tengo que reforzar en la próxima clase y por qué?»</h3>
+                  <p class="text-[12px] text-slate-500">Pantalla D · panel docente</p>
+                </div>
+                <span class="rounded-md bg-coder-100 px-2 py-1 text-[10px] font-bold text-coder-700 ring-1 ring-coder-200">Objetivo: RF07 · RF15</span>
+              </div>
+              <p class="mt-3 text-[12.5px] leading-relaxed text-slate-600">
+                «Mira el panel de tu grupo. Dime qué tema vas a reforzar en la próxima clase y qué
+                evidencia te da la plataforma para decidir eso.»
+              </p>
+              <p class="mt-2 text-[12px] leading-relaxed text-slate-500">
+                <strong class="font-semibold text-slate-700">Se mide:</strong> si llega al punto
+                crítico o al patrón de error dominante sin ayuda, y si puede enunciar la decisión
+                con la evidencia que ve. Esta tarea valida la promesa que distingue la plataforma
+                de un LMS genérico.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- instrumento -->
+        <section class="mt-10 grid gap-4 lg:grid-cols-2">
+          <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Instrumento</h2>
+            <p class="mt-1 text-[12.5px] text-slate-600">
+              Encuesta breve que se responde al terminar cada tarea. Escala de 1 a 5, más dos
+              preguntas abiertas.
+            </p>
+
+            <div class="mt-4 space-y-2.5">
+              <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
+                <p class="text-[12.5px] font-semibold text-slate-800">1. «Pude completar la tarea sin ayuda»</p>
+                <p class="mt-1 text-[11px] text-slate-500">1 = no pude · 5 = sin ninguna dificultad</p>
+              </div>
+              <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
+                <p class="text-[12.5px] font-semibold text-slate-800">2. «Sabía lo que tenía que hacer en todo momento»</p>
+                <p class="mt-1 text-[11px] text-slate-500">1 = nunca supe qué hacer · 5 = siempre</p>
+              </div>
+              <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
+                <p class="text-[12.5px] font-semibold text-slate-800">3. «La plataforma me explicó lo que no entendía»</p>
+                <p class="mt-1 text-[11px] text-slate-500">1 = nada · 5 = todo</p>
+              </div>
+              <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
+                <p class="text-[12.5px] font-semibold text-slate-800">4. «La usarías en tu estudio real»</p>
+                <p class="mt-1 text-[11px] text-slate-500">1 = no · 5 = sí, todos los días</p>
+              </div>
+              <div class="rounded-xl bg-up-50 p-3 ring-1 ring-up-200">
+                <p class="text-[12.5px] font-semibold text-up-900">5. «¿Qué es lo primero que cambiarías?»</p>
+                <p class="mt-1 text-[11px] text-up-800">Abierta</p>
+              </div>
+              <div class="rounded-xl bg-up-50 p-3 ring-1 ring-up-200">
+                <p class="text-[12.5px] font-semibold text-up-900">6. «¿Hubo algo que no entendiste y no supiste dónde buscarlo?»</p>
+                <p class="mt-1 text-[11px] text-up-800">Abierta</p>
+              </div>
+            </div>
+
+            <p class="mt-4 rounded-xl bg-fiec-50 p-3 text-[12px] leading-relaxed text-fiec-900 ring-1 ring-fiec-200">
+              Las preguntas 5 y 6 son las que más información dan: la 5 recoge el problema que la
+              persona priorizaría, y la 6 recoge los fallos de <em>hallazgo</em>, que no se detectan
+              mirando las pantallas.
+            </p>
+          </div>
+
+          <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Criterios de aceptación</h2>
+            <p class="mt-1 text-[12.5px] text-slate-600">
+              Umbrales acordados antes de la prueba, para no interpretar los resultados a posteriori.
+            </p>
+
+            <div class="mt-4 overflow-x-auto">
+              <table class="w-full min-w-[420px] text-left text-[12px]">
+                <thead>
+                  <tr class="border-b border-slate-300">
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Indicador</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Umbral</th>
+                    <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Origen</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr><td class="py-2 pr-3 font-semibold text-slate-700">Calificación media de usabilidad</td><td class="py-2 pr-3 font-bold text-coder-700">≥ 8 / 10</td><td class="py-2 text-slate-500">RNF04 · §21</td></tr>
+                  <tr><td class="py-2 pr-3 font-semibold text-slate-700">Tareas completadas sin ayuda</td><td class="py-2 pr-3 font-bold text-coder-700">≥ 80 %</td><td class="py-2 text-slate-500">Propio</td></tr>
+                  <tr><td class="py-2 pr-3 font-semibold text-slate-700">Participantes que cuentan el uso real</td><td class="py-2 pr-3 font-bold text-coder-700">≥ 70 %</td><td class="py-2 text-slate-500">Pregunta 4</td></tr>
+                  <tr><td class="py-2 pr-3 font-semibold text-slate-700">Fallo de hallazgo en la T2 (visor de anatomía)</td><td class="py-2 pr-3 font-bold text-coder-700">0 participantes</td><td class="py-2 text-slate-500">Tarea central</td></tr>
+                  <tr><td class="py-2 pr-3 font-semibold text-slate-700">Docente que identifica un tema a reforzar</td><td class="py-2 pr-3 font-bold text-coder-700">≥ 1</td><td class="py-2 text-slate-500">§21</td></tr>
+                  <tr><td class="py-2 pr-3 font-semibold text-slate-700">Errores de contraste (verificados, no preguntados)</td><td class="py-2 pr-3 font-bold text-coder-700">0</td><td class="py-2 text-slate-500">RNF06</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="mt-4 rounded-xl bg-up-50 p-3 text-[12px] leading-relaxed text-up-900 ring-1 ring-up-200">
+              El último indicador ya está cumplido en el prototipo actual: la auditoría de contraste
+              sobre el DOM renderizado da cero pares por debajo del mínimo de WCAG AA. Se mantiene en
+              la lista porque hay que volver a medirlo después de cada cambio.
+            </p>
+          </div>
+        </section>
+
+        <!-- bitacora -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">Bitácora de hallazgos</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Cada problema detectado durante la prueba, con su gravedad, su decisión y su estado.
+            La tabla queda vacía hasta la ejecución del piloto.
+          </p>
+
+          <div class="mt-4 overflow-x-auto rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+            <table class="w-full min-w-[720px] text-left text-[12px]">
+              <thead>
+                <tr class="border-b border-slate-300">
+                  <th class="px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">#</th>
+                  <th class="px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Tarea</th>
+                  <th class="px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Qué pasó</th>
+                  <th class="px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Gravedad</th>
+                  <th class="px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Decisión</th>
+                  <th class="px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="6" class="px-4 py-10 text-center">
+                    <p class="text-[12.5px] font-semibold text-slate-500">Sin hallazgos registrados</p>
+                    <p class="mt-1 text-[11.5px] text-slate-500">La prueba se ejecuta con el grupo piloto, después de la entrega del Avance 3.</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-4 text-[11.5px] leading-relaxed text-slate-500">
+            <strong class="font-semibold text-slate-600">Criterio de gravedad:</strong>
+            <span class="rounded-md bg-red-100 px-1.5 py-0.5 text-[10px] font-bold text-red-700">alta</span>
+            impide completar la tarea ·
+            <span class="rounded-md bg-up-50 px-1.5 py-0.5 text-[10px] font-bold text-up-800">media</span>
+            la completa con dificultad o con ayuda ·
+            <span class="rounded-md bg-slate-100 px-1.5 py-0.5 text-[10px] font-bold text-slate-600">baja</span>
+            incomoda pero no bloquea.
+          </p>
+        </section>
+
+      </div>
+    </section>
   </div>
 
   <p class="mx-auto max-w-[1500px] px-4 py-6 text-center text-[11px] leading-relaxed text-slate-600">
