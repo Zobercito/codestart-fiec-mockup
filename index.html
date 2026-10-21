@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CodeStart FIEC — Mockup de interfaz (v0 · solo diseño, sin funcionalidad)</title>
+<title>CodeStart FIEC — Diseño instruccional e interfaz (Avance 2)</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,26 +56,42 @@
 <body class="bg-slate-100 text-slate-800 antialiased">
 
 <!-- ═══════════════════════════════════════════════════════════════
-     BARRA DE MOCKUP (fuera de la app) — solo navegacion de pantallas
+     BARRA DE MOCKUP (fuera de la app) — navegacion entre pantallas
+     y entre las secciones de documentacion de diseño
      ═══════════════════════════════════════════════════════════════ -->
 <header class="sticky top-0 z-50 border-b border-slate-300 bg-slate-900 text-white">
-  <div class="mx-auto flex max-w-[1500px] flex-wrap items-center gap-3 px-4 py-2.5">
-    <div class="flex items-center gap-2">
-      <span class="rounded-md bg-up-500 px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wider text-slate-900">Mockup</span>
-      <span class="text-sm font-semibold">CodeStart FIEC — prototipado de interfaz</span>
+  <div class="mx-auto max-w-[1500px] px-4 py-2.5">
+    <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
+      <div class="flex items-center gap-2">
+        <span class="rounded-md bg-up-500 px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wider text-slate-900">A2</span>
+        <span class="text-sm font-semibold">CodeStart FIEC — diseño instruccional e interfaz</span>
+      </div>
+
+      <div class="ml-auto hidden items-center gap-3 text-[11px] text-slate-400 lg:flex">
+        <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-up-500"></span>prototipo + documentación de diseño</span>
+        <span>|</span>
+        <span>Avance 2 · Diseño Instruccional y de Interfaz</span>
+      </div>
     </div>
 
-    <nav class="flex flex-wrap items-center gap-1.5" id="screenNav">
-      <button data-go="scr-dashboard" class="scr-btn rounded-lg bg-fiec-600 px-3 py-1.5 text-xs font-semibold ring-1 ring-white/20 transition hover:bg-fiec-500">A · Dashboard estudiante</button>
-      <button data-go="scr-leccion"   class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">B · Lección teórica</button>
-      <button data-go="scr-editor"    class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">C · Editor de retos</button>
-      <button data-go="scr-docente"   class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">D · Panel docente</button>
-    </nav>
+    <div class="mt-2 flex flex-wrap items-center gap-x-5 gap-y-1.5">
+      <!-- GRUPO 1 · el prototipo -->
+      <div class="flex flex-wrap items-center gap-1.5">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">Prototipo</span>
+        <button data-go="scr-dashboard" class="scr-btn rounded-lg bg-fiec-600 px-3 py-1.5 text-xs font-semibold ring-1 ring-white/20 transition hover:bg-fiec-500">A · Dashboard</button>
+        <button data-go="scr-leccion"   class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">B · Lección</button>
+        <button data-go="scr-editor"    class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">C · Editor</button>
+        <button data-go="scr-docente"   class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">D · Panel docente</button>
+      </div>
 
-    <div class="ml-auto hidden items-center gap-3 text-[11px] text-slate-400 lg:flex">
-      <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-up-500"></span>sin funcionalidad · solo diseño</span>
-      <span class="text-slate-400">|</span>
-      <span>Avance 1 · Fase de Análisis y Planificación</span>
+      <!-- GRUPO 2 · la documentacion de diseño -->
+      <div class="flex flex-wrap items-center gap-1.5">
+        <span class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">Diseño</span>
+        <button data-go="doc-estilo"     class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">▣ Guía de estilo</button>
+        <button data-go="doc-storyboard" class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">▤ Storyboard</button>
+        <button data-go="doc-mapa"       class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">⌘ Mapa de navegación</button>
+        <button data-go="doc-validacion" class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">✓ Validación</button>
+      </div>
     </div>
   </div>
 </header>
@@ -1357,14 +1373,20 @@
 <script>
 /* ── Mockup: solo conmutación de vistas para recorrer el prototipo ── */
 function showScreen(id, btn) {
+  const el = document.getElementById(id);
+  if (!el) return;                       /* seccion todavia no anadida */
   document.querySelectorAll('[data-screen]').forEach(s => s.classList.add('hidden'));
-  document.getElementById(id).classList.remove('hidden');
+  el.classList.remove('hidden');
   document.querySelectorAll('.scr-btn').forEach(b => {
-    b.className = 'scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold ring-1 transition ' +
-      (b === btn
-        ? 'bg-fiec-600 text-white ring-white/20'
-        : 'text-slate-300 ring-white/15 hover:bg-white/10');
+    const on = (btn && b === btn) || b.dataset.go === id;
+    b.classList.toggle('bg-fiec-600', on);
+    b.classList.toggle('text-white', on);
+    b.classList.toggle('ring-white/20', on);
+    b.classList.toggle('text-slate-300', !on);
+    b.classList.toggle('ring-white/15', !on);
+    b.classList.toggle('hover:bg-white/10', !on);
   });
+  if (!id.startsWith('doc-') && typeof setStoryboard === 'function') setStoryboard(false);
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 document.querySelectorAll('.scr-btn').forEach(b => {
