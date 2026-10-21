@@ -6,6 +6,10 @@ node_modules/
 documentacion/
 CodeStart_FIEC_-_INF_EDUC_v2.odt
 
+# Aplicacion del Avance 3: vive en su propio repositorio
+# (Zobercito/codestart_fiec). Este repo solo sirve el mockup.
+CodeStart_FIEC/
+
 # Índice local de CodeGraph
 .codegraph/
 
