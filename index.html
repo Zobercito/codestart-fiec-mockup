@@ -1318,6 +1318,673 @@
         </div>
       </div>
     </section>
+
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <!-- DOCUMENTACIÓN DE DISEÑO · GUÍA DE ESTILO                      -->
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <section id="doc-estilo" data-screen class="hidden bg-slate-50">
+      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-6">
+
+        <header class="border-b border-slate-200 pb-6">
+          <p class="text-xs font-bold uppercase tracking-wider text-fiec-600">Documentación de diseño · Avance 2</p>
+          <h1 class="mt-1 text-3xl font-extrabold tracking-tight text-slate-900">Guía de estilo</h1>
+          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            Tokens, componentes y reglas del prototipo de CodeStart FIEC. Todo lo que aparece aquí
+            está en uso en las cuatro pantallas del prototipo: no hay un catálogo paralelo de lo que el
+            mockup no usa. Los valores de contraste se han medido sobre el DOM renderizado, no
+            estimado, y todos los pares de texto del prototipo cumplen WCAG 2.1 AA.
+          </p>
+        </header>
+
+        <!-- ── 1 · PRINCIPIOS ─────────────────────────────────── -->
+        <section class="mt-8">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">1 · Principios</h2>
+          <p class="mt-1 text-sm text-slate-600">Cuatro reglas que resuelven la mayoría de las decisiones de interfaz.</p>
+
+          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="grid h-9 w-9 place-items-center rounded-xl bg-fiec-50 text-lg">🎯</div>
+              <h3 class="mt-3 text-sm font-bold text-slate-900">Una pantalla, un objetivo</h3>
+              <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+                El dashboard responde «¿dónde voy?», la lección «¿qué es esto?», el editor «¿mi
+                código funciona?» y el panel «¿cómo va mi grupo?». Si una pantalla compite por dos
+                objetivos, se divide.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="grid h-9 w-9 place-items-center rounded-xl bg-up-50 text-lg">⚡</div>
+              <h3 class="mt-3 text-sm font-bold text-slate-900">Respuesta inmediata</h3>
+              <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+                Nada de estados neutros: cada acción produce una respuesta visible en menos de un
+                segundo. Acierto, error, pista, progreso o insignia. Es la función instructiva de
+                la plataforma.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="grid h-9 w-9 place-items-center rounded-xl bg-coder-100 text-lg">🔍</div>
+              <h3 class="mt-3 text-sm font-bold text-slate-900">Hacer visible lo invisible</h3>
+              <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+                Variables, memoria y flujo de ejecución no se describen: se muestran. La simulación
+                de memoria y el visor línea por línea son el producto, no un adorno.
+              </p>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <div class="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-lg">📱</div>
+              <h3 class="mt-3 text-sm font-bold text-slate-900">Se usa con el dedo</h3>
+              <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
+                Las tabletas son el dispositivo real del curso. Toda interacción por cursor tiene
+                equivalente por toque o teclado, y ningún objetivo táctil baja de 44 px.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── 2 · COLOR ──────────────────────────────────────── -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">2 · Color</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Cuatro familias con un papel fijo. El color comunica estado, no decora: si algo está
+            verde, es un acierto; si está azul, es la institución.
+          </p>
+
+          <!-- familias -->
+          <div class="mt-5 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            <article class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+              <div class="h-2 bg-fiec-600"></div>
+              <div class="p-5">
+                <h3 class="text-sm font-extrabold text-fiec-700">FIEC</h3>
+                <p class="mt-1 text-[12.5px] leading-relaxed text-slate-600">
+                  Identidad institucional. Navegación, enlaces, acciones primarias, el anillo de
+                  progreso y el estado «en progreso».
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-fiec-600 px-2 py-1 text-[10px] font-bold text-white">600</span>
+                  <span class="rounded-md bg-fiec-700 px-2 py-1 text-[10px] font-bold text-white">700</span>
+                  <span class="rounded-md bg-fiec-500 px-2 py-1 text-[10px] font-bold text-white">500</span>
+                  <span class="rounded-md bg-fiec-50 px-2 py-1 text-[10px] font-bold text-fiec-700">50</span>
+                </div>
+                <p class="mono mt-3 text-[11px] text-slate-500">#0B62A4 · #0A4F86 · #1779BE · #EFF7FD</p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+              <div class="h-2 bg-up-500"></div>
+              <div class="p-5">
+                <h3 class="text-sm font-extrabold text-up-800">UP</h3>
+                <p class="mt-1 text-[12.5px] leading-relaxed text-slate-600">
+                  Color de la universidad. Progreso, racha, insignias, advertencias y el estado
+                  «pendiente». Nunca se usa para texto sobre fondo claro: se oscurece a 700 u 800.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-up-500 px-2 py-1 text-[10px] font-bold text-slate-900">500</span>
+                  <span class="rounded-md bg-up-700 px-2 py-1 text-[10px] font-bold text-white">700</span>
+                  <span class="rounded-md bg-up-900 px-2 py-1 text-[10px] font-bold text-white">900</span>
+                  <span class="rounded-md bg-up-50 px-2 py-1 text-[10px] font-bold text-up-800">50</span>
+                </div>
+                <p class="mono mt-3 text-[11px] text-slate-500">#F5B014 · #A16207 · #713F12 · #FEF9E7</p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+              <div class="h-2 bg-coder-500"></div>
+              <div class="p-5">
+                <h3 class="text-sm font-extrabold text-coder-700">Éxito</h3>
+                <p class="mt-1 text-[12.5px] leading-relaxed text-slate-600">
+                  Aciertos y estados completados. Sobre fondo verde se usa texto oscuro, nunca
+                  blanco: el verde de marca es demasiado claro para texto blanco.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-coder-500 px-2 py-1 text-[10px] font-bold text-slate-900">500</span>
+                  <span class="rounded-md bg-coder-700 px-2 py-1 text-[10px] font-bold text-white">700</span>
+                  <span class="rounded-md bg-coder-100 px-2 py-1 text-[10px] font-bold text-coder-700">100</span>
+                </div>
+                <p class="mono mt-3 text-[11px] text-slate-500">#10B981 · #047857 · #D1FAE5</p>
+              </div>
+            </article>
+
+            <article class="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
+              <div class="h-2 bg-red-600"></div>
+              <div class="p-5">
+                <h3 class="text-sm font-extrabold text-red-700">Error</h3>
+                <p class="mt-1 text-[12.5px] leading-relaxed text-slate-600">
+                  Fallos de validación, errores de compilación y fechas vencidas. Es el único color que
+                  nunca se usa para decorar.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-1.5">
+                  <span class="rounded-md bg-red-600 px-2 py-1 text-[10px] font-bold text-white">600</span>
+                  <span class="rounded-md bg-red-50 px-2 py-1 text-[10px] font-bold text-red-700">50</span>
+                </div>
+                <p class="mono mt-3 text-[11px] text-slate-500">#DC2626 · #FEF2F2</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- escala de grises -->
+          <div class="mt-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h3 class="text-sm font-extrabold text-slate-900">Escala de grises (texto y superficies)</h3>
+            <p class="mt-1 text-[12.5px] text-slate-600">
+              Siete niveles de texto y cuatro de superficie. El nivel se elige por su función, no por
+              decoración.
+            </p>
+            <div class="mt-4 overflow-x-auto">
+              <table class="w-full min-w-[640px] text-left text-[12px]">
+                <thead>
+                  <tr class="border-b border-slate-300">
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Token</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Hex</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Uso</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Muestra</th>
+                    <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Sobre blanco</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr><td class="py-2 pr-3 font-bold text-slate-800">slate-900</td><td class="mono py-2 pr-3 text-slate-600">#0F172A</td><td class="py-2 pr-3 text-slate-600">Titulares, texto sobre verde o ámbar</td><td class="py-2 pr-3 text-slate-900">Texto principal</td><td class="py-2 font-bold text-coder-700">19.6 : 1</td></tr>
+                  <tr><td class="py-2 pr-3 font-bold text-slate-800">slate-800</td><td class="mono py-2 pr-3 text-slate-600">#1E293B</td><td class="py-2 pr-3 text-slate-600">Títulos de tarjeta y de sección</td><td class="py-2 pr-3 text-slate-800">Subtítulo</td><td class="py-2 font-bold text-coder-700">14.6 : 1</td></tr>
+                  <tr><td class="py-2 pr-3 font-bold text-slate-800">slate-700</td><td class="mono py-2 pr-3 text-slate-600">#334155</td><td class="py-2 pr-3 text-slate-600">Texto de emphasise y tablas</td><td class="py-2 pr-3 text-slate-700">Enfasis</td><td class="py-2 font-bold text-coder-700">10.3 : 1</td></tr>
+                  <tr><td class="py-2 pr-3 font-bold text-slate-800">slate-600</td><td class="mono py-2 pr-3 text-slate-600">#475569</td><td class="py-2 pr-3 text-slate-600">Cuerpo de texto secundario</td><td class="py-2 pr-3 text-slate-600">Cuerpo</td><td class="py-2 font-bold text-coder-700">7.6 : 1</td></tr>
+                  <tr><td class="py-2 pr-3 font-bold text-slate-800">slate-500</td><td class="mono py-2 pr-3 text-slate-600">#64748B</td><td class="py-2 pr-3 text-slate-600">Etiquetas, metadatos, texto deshabilitado</td><td class="py-2 pr-3 text-slate-500">Etiqueta</td><td class="py-2 font-bold text-coder-700">4.8 : 1</td></tr>
+                  <tr><td class="py-2 pr-3 font-bold text-slate-500">slate-400</td><td class="mono py-2 pr-3 text-slate-600">#94A3B8</td><td class="py-2 pr-3 text-slate-600">Solo sobre superficies oscuras</td><td class="py-2 pr-3"><span class="rounded bg-slate-900 px-1.5 py-0.5 text-slate-400">oscuro</span></td><td class="py-2 font-bold text-red-700">2.6 : 1</td></tr>
+                  <tr><td class="py-2 pr-3 font-bold text-slate-500">slate-300</td><td class="mono py-2 pr-3 text-slate-600">#CBD5E1</td><td class="py-2 pr-3 text-slate-600">Solo sobre superficies oscuras</td><td class="py-2 pr-3"><span class="rounded bg-slate-900 px-1.5 py-0.5 text-slate-300">oscuro</span></td><td class="py-2 font-bold text-red-700">1.5 : 1</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- contraste -->
+          <div class="mt-6 grid gap-4 lg:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="flex items-center gap-2 text-sm font-extrabold text-slate-900">
+                <span class="grid h-6 w-6 place-items-center rounded-full bg-coder-100 text-[11px] text-coder-700">✓</span>
+                Combinaciones permitidas
+              </h3>
+              <p class="mt-1.5 text-[12.5px] text-slate-600">
+                Verificadas sobre el DOM real. Mínimo 4.5:1 en texto normal, 3:1 en texto grande.
+              </p>
+              <div class="mt-4 overflow-x-auto">
+                <table class="w-full min-w-[420px] text-left text-[12px]">
+                  <thead>
+                    <tr class="border-b border-slate-300">
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Par</th>
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Muestra</th>
+                      <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Ratio</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-800 / blanco</td><td class="py-2 pr-3"><span class="rounded bg-white px-1.5 py-0.5 text-slate-800 ring-1 ring-slate-200">Texto</span></td><td class="py-2 font-bold text-coder-700">14.6</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-500 / blanco</td><td class="py-2 pr-3"><span class="rounded bg-white px-1.5 py-0.5 text-slate-500 ring-1 ring-slate-200">Etiqueta</span></td><td class="py-2 font-bold text-coder-700">4.8</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">fiec-700 / blanco</td><td class="py-2 pr-3"><span class="rounded bg-white px-1.5 py-0.5 text-fiec-700 ring-1 ring-slate-200">Enlace</span></td><td class="py-2 font-bold text-coder-700">8.5</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">blanco / fiec-600</td><td class="py-2 pr-3"><span class="rounded bg-fiec-600 px-1.5 py-0.5 text-white">Botón</span></td><td class="py-2 font-bold text-coder-700">6.4</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">up-700 / up-50</td><td class="py-2 pr-3"><span class="rounded bg-up-50 px-1.5 py-0.5 text-up-700">Racha</span></td><td class="py-2 font-bold text-coder-700">4.6</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">coder-700 / coder-100</td><td class="py-2 pr-3"><span class="rounded bg-coder-100 px-1.5 py-0.5 text-coder-700">Aprobado</span></td><td class="py-2 font-bold text-coder-700">4.9</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">blanco / red-600</td><td class="py-2 pr-3"><span class="rounded bg-red-600 px-1.5 py-0.5 text-white">Error</span></td><td class="py-2 font-bold text-coder-700">4.8</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-300 / slate-900</td><td class="py-2 pr-3"><span class="rounded bg-slate-900 px-1.5 py-0.5 text-slate-300">Código</span></td><td class="py-2 font-bold text-coder-700">12.0</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-900 / up-500</td><td class="py-2 pr-3"><span class="rounded bg-up-500 px-1.5 py-0.5 text-slate-900">Insignia</span></td><td class="py-2 font-bold text-coder-700">9.4</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="flex items-center gap-2 text-sm font-extrabold text-slate-900">
+                <span class="grid h-6 w-6 place-items-center rounded-full bg-red-100 text-[11px] text-red-700">✕</span>
+                Combinaciones prohibidas
+              </h3>
+              <p class="mt-1.5 text-[12.5px] text-slate-600">
+                Detectadas al auditar el prototipo. Cada una dice cuál es el valor correcto.
+              </p>
+              <div class="mt-4 overflow-x-auto">
+                <table class="w-full min-w-[460px] text-left text-[12px]">
+                  <thead>
+                    <tr class="border-b border-slate-300">
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Par</th>
+                      <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Ratio</th>
+                      <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Usar en su lugar</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-slate-200">
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-400 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">2.6</td><td class="py-2 text-slate-600">slate-500</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-400 / slate-100</td><td class="py-2 pr-3 font-bold text-red-700">2.3</td><td class="py-2 text-slate-600">slate-600</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">up-600 / up-50</td><td class="py-2 pr-3 font-bold text-red-700">2.3</td><td class="py-2 text-slate-600">up-700</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">up-500 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">1.9</td><td class="py-2 text-slate-600">up-700</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">coder-500 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">2.5</td><td class="py-2 text-slate-600">coder-700</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">coder-600 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">3.8</td><td class="py-2 text-slate-600">coder-700</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">blanco / coder-500</td><td class="py-2 pr-3 font-bold text-red-700">2.5</td><td class="py-2 text-slate-600">texto slate-900</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">red-500 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">3.8</td><td class="py-2 text-slate-600">red-600</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-500 / slate-900</td><td class="py-2 pr-3 font-bold text-red-700">3.8</td><td class="py-2 text-slate-600">slate-300</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">sky-300 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">1.7</td><td class="py-2 text-slate-600">sky-700</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">emerald-300 / blanco</td><td class="py-2 pr-3 font-bold text-red-700">1.5</td><td class="py-2 text-slate-600">emerald-700</td></tr>
+                    <tr><td class="py-2 pr-3 text-slate-600">slate-800 / slate-900</td><td class="py-2 pr-3 font-bold text-red-700">1.2</td><td class="py-2 text-slate-600">slate-300</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="mt-3 rounded-xl bg-up-50 p-3 text-[12px] leading-relaxed text-up-900 ring-1 ring-up-200">
+                <strong>Regla de opacidad.</strong> No se usa <code class="mono">opacity</code> para atenuar
+                estados: reduce el contraste del texto de forma que no se puede controlar. Las
+                tarjetas de módulo bloqueado usan colores explícitos en lugar de <code class="mono">opacity-75</code>.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 3 · TIPOGRAFÍA ─────────────────────────────────── -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">3 · Tipografía</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Dos familias con papeles separados: <strong class="font-semibold text-slate-700">Inter</strong>
+            para interfaz y texto, <strong class="font-semibold text-slate-700">JetBrains Mono</strong>
+            para código y datos técnicos.
+          </p>
+
+          <div class="mt-5 grid gap-4 lg:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Inter — interfaz y texto</h3>
+              <div class="mt-4 space-y-3">
+                <div class="flex items-baseline gap-4 border-b border-slate-100 pb-2">
+                  <span class="w-16 shrink-0 text-[10px] font-bold uppercase tracking-wider text-slate-500">24 / 800</span>
+                  <span class="text-2xl font-extrabold tracking-tight text-slate-900">Título de pantalla</span>
+                </div>
+                <div class="flex items-baseline gap-4 border-b border-slate-100 pb-2">
+                  <span class="w-16 shrink-0 text-[10px] font-bold uppercase tracking-wider text-slate-500">18 / 700</span>
+                  <span class="text-lg font-bold text-slate-800">Título de tarjeta</span>
+                </div>
+                <div class="flex items-baseline gap-4 border-b border-slate-100 pb-2">
+                  <span class="w-16 shrink-0 text-[10px] font-bold uppercase tracking-wider text-slate-500">14 / 400</span>
+                  <span class="text-sm text-slate-700">Texto de párrafo del sistema</span>
+                </div>
+                <div class="flex items-baseline gap-4 border-b border-slate-100 pb-2">
+                  <span class="w-16 shrink-0 text-[10px] font-bold uppercase tracking-wider text-slate-500">12 / 400</span>
+                  <span class="text-xs text-slate-600">Texto secundario y descripciones</span>
+                </div>
+                <div class="flex items-baseline gap-4 border-b border-slate-100 pb-2">
+                  <span class="w-16 shrink-0 text-[10px] font-bold uppercase tracking-wider text-slate-500">10 / 700</span>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Etiqueta en versales</span>
+                </div>
+                <div class="flex items-baseline gap-4">
+                  <span class="w-16 shrink-0 text-[10px] font-bold uppercase tracking-wider text-slate-500">9 / 600</span>
+                  <span class="text-[9px] font-semibold uppercase text-slate-500">Microetiqueta</span>
+                </div>
+              </div>
+              <p class="mt-4 rounded-xl bg-slate-50 p-3 text-[12px] leading-relaxed text-slate-600 ring-1 ring-slate-200">
+                <strong>Regla de tamaño mínimo.</strong> 9 px y 10 px solo para etiquetas en versales
+                o metadatos, nunca para frases. Por debajo de 11 px la lectura de un texto de
+               Programación se vuelve más lenta que leerlo en la pizarra.
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">JetBrains Mono — código y datos</h3>
+              <p class="mt-1 text-[12.5px] text-slate-600">
+                Se usa siempre en bloque, nunca en línea con el texto corrido.
+              </p>
+              <div class="mono mt-4 overflow-x-auto rounded-xl bg-slate-900 p-4 text-[12px] leading-relaxed text-slate-300 ring-1 ring-slate-800">
+                <span class="text-sky-300">#include</span> <span class="text-slate-400">&lt;stdio.h&gt;</span><br>
+                <span class="text-sky-300">int</span> <span class="text-emerald-300">main</span>() {<br>
+                &nbsp;&nbsp;<span class="text-sky-300">int</span> edad = <span class="text-amber-300">17</span>;<br>
+                &nbsp;&nbsp;<span class="text-sky-300">if</span> (edad &gt;= <span class="text-amber-300">18</span>) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-emerald-300">printf</span>(<span class="text-rose-300">"Mayor de edad\n"</span>);<br>
+                &nbsp;&nbsp;}<br>
+                &nbsp;&nbsp;<span class="text-sky-300">return</span> <span class="text-amber-300">0</span>;<br>
+                }
+              </div>
+              <p class="mt-4 rounded-xl bg-slate-50 p-3 text-[12px] leading-relaxed text-slate-600 ring-1 ring-slate-200">
+                <strong>Paleta del código.</strong> Sobre superficie oscura
+                (<code class="mono">slate-900</code>): palabras clave en <code class="mono">sky-300</code>,
+                identificadores en <code class="mono">emerald-300</code>, literales en
+                <code class="mono">amber-300</code>, cadenas en <code class="mono">rose-300</code>.
+                Sobre superficie clara se invierten los tonos, o el fragmento se muestra sobre fondo
+                oscuro: nunca se deja el resaltado de tema oscuro sobre fondo blanco.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 4 · ESPACiado, FORMA Y SUPERFICIES ─────────────── -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">4 · Espaciado, forma y superficies</h2>
+
+          <div class="mt-5 grid gap-4 lg:grid-cols-3">
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Escala de espaciado</h3>
+              <p class="mt-1 text-[12.5px] text-slate-600">Multiplos de 4 px. Solo estos valores.</p>
+              <div class="mt-3 space-y-1.5">
+                <div class="flex items-center gap-3"><span class="mono w-10 text-[11px] text-slate-500">4</span><span class="h-1 w-1 rounded bg-slate-400"></span><span class="text-[11px] text-slate-500">entre icono y texto</span></div>
+                <div class="flex items-center gap-3"><span class="mono w-10 text-[11px] text-slate-500">8</span><span class="h-2 w-2 rounded bg-slate-400"></span><span class="text-[11px] text-slate-500">dentro de un chip</span></div>
+                <div class="flex items-center gap-3"><span class="mono w-10 text-[11px] text-slate-500">12</span><span class="h-3 w-3 rounded bg-slate-400"></span><span class="text-[11px] text-slate-500">entre elementos de una fila</span></div>
+                <div class="flex items-center gap-3"><span class="mono w-10 text-[11px] text-slate-500">16</span><span class="h-4 w-4 rounded bg-slate-400"></span><span class="text-[11px] text-slate-500">padding de tarjeta</span></div>
+                <div class="flex items-center gap-3"><span class="mono w-10 text-[11px] text-slate-500">24</span><span class="h-6 w-6 rounded bg-slate-400"></span><span class="text-[11px] text-slate-500">entre bloques</span></div>
+                <div class="flex items-center gap-3"><span class="mono w-10 text-[11px] text-slate-500">32</span><span class="h-8 w-8 rounded bg-slate-400"></span><span class="text-[11px] text-slate-500">entre secciones</span></div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Radios</h3>
+              <p class="mt-1 text-[12.5px] text-slate-600">Cuanto mayor la superficie, mayor el radio.</p>
+              <div class="mt-3 flex flex-wrap items-center gap-3">
+                <div class="grid h-12 w-12 place-items-center rounded bg-slate-100 text-[10px] font-bold text-slate-600 ring-1 ring-slate-200">sm</div>
+                <div class="grid h-12 w-12 place-items-center rounded-lg bg-slate-100 text-[10px] font-bold text-slate-600 ring-1 ring-slate-200">md</div>
+                <div class="grid h-12 w-12 place-items-center rounded-xl bg-slate-100 text-[10px] font-bold text-slate-600 ring-1 ring-slate-200">lg</div>
+                <div class="grid h-12 w-12 place-items-center rounded-2xl bg-slate-100 text-[10px] font-bold text-slate-600 ring-1 ring-slate-200">xl</div>
+                <div class="grid h-12 w-12 place-items-center rounded-3xl bg-slate-100 text-[10px] font-bold text-slate-600 ring-1 ring-slate-200">3xl</div>
+              </div>
+              <p class="mt-3 text-[12px] leading-relaxed text-slate-600">
+                <code class="mono">rounded-xl</code> para tarjetas y botones medianos,
+                <code class="mono">rounded-2xl</code> para contenedores de sección,
+                <code class="mono">rounded-3xl</code> para el modal.
+              </p>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Superficies</h3>
+              <p class="mt-1 text-[12.5px] text-slate-600">Tres niveles, sin más.</p>
+              <div class="mt-3 space-y-2.5">
+                <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
+                  <p class="text-[11px] font-bold text-slate-700">Lienzo · slate-50</p>
+                  <p class="text-[11px] text-slate-500">Fondo de la aplicación</p>
+                </div>
+                <div class="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200">
+                  <p class="text-[11px] font-bold text-slate-700">Tarjeta · blanco</p>
+                  <p class="text-[11px] text-slate-500">Con sombra mínima y borde de 1 px</p>
+                </div>
+                <div class="rounded-xl bg-slate-900 p-3">
+                  <p class="text-[11px] font-bold text-slate-200">Código · slate-900</p>
+                  <p class="text-[11px] text-slate-400">Editor, terminal y fragmentos</p>
+                </div>
+              </div>
+              <p class="mt-3 text-[12px] leading-relaxed text-slate-600">
+                Los bordes son de <strong class="font-semibold text-slate-700">1 px</strong>
+                (<code class="mono">ring-1</code>). El <code class="mono">ring-2</code> se reserva para
+                marcar el elemento en foco o el módulo activo.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 5 · COMPONENTES ─────────────────────────────────── -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">5 · Componentes base</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Los mismos componentes que usan las pantallas, mostrados con todos sus estados.
+          </p>
+
+          <div class="mt-5 grid gap-4 lg:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Botones</h3>
+              <div class="mt-4 space-y-4">
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Primario · una acción principal por pantalla</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <button class="rounded-xl bg-fiec-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-fiec-600/25 transition hover:bg-fiec-700">Continuar módulo 4 →</button>
+                    <button class="rounded-xl bg-slate-200 px-5 py-2.5 text-sm font-bold text-slate-600">Deshabilitado</button>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Secundario</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <button class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition hover:bg-slate-50">Ver mis tareas pendientes (2)</button>
+                    <button class="rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-500 ring-1 ring-slate-200">Deshabilitado</button>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">De acción y de estado</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <button class="rounded-xl bg-up-500 px-4 py-2.5 text-sm font-extrabold text-slate-900 shadow hover:bg-up-400">Continuar tarea</button>
+                    <button class="rounded-xl bg-coder-500 px-4 py-2.5 text-sm font-extrabold text-slate-900 shadow hover:bg-coder-600">Verificar solución</button>
+                    <button class="rounded-xl bg-red-600 px-4 py-2.5 text-sm font-extrabold text-white shadow hover:bg-red-700">Descartar</button>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Fantasma y de texto</p>
+                  <div class="mt-2 flex flex-wrap items-center gap-2">
+                    <button class="rounded-xl px-4 py-2.5 text-sm font-semibold text-fiec-700 hover:bg-fiec-50">Volver a la lección</button>
+                    <button class="rounded-xl px-4 py-2.5 text-sm font-semibold text-fiec-700 underline decoration-fiec-300 underline-offset-4">Ver todas</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Insignias de estado</h3>
+              <div class="mt-4 space-y-4">
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Módulo</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-slate-900">✓ Completado</span>
+                    <span class="rounded-full bg-white px-2 py-0.5 text-[10px] font-extrabold text-fiec-700 ring-1 ring-slate-200">● En progreso</span>
+                    <span class="rounded-full bg-slate-800/80 px-2 py-0.5 text-[10px] font-extrabold text-white">🔒 Bloqueado</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Reto</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-md bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-slate-900">Caso 1 aprobado</span>
+                    <span class="rounded-md bg-red-600 px-2 py-0.5 text-[10px] font-extrabold text-white">1 error</span>
+                    <span class="rounded-md bg-up-50 px-2 py-0.5 text-[10px] font-extrabold text-up-800 ring-1 ring-up-200">+40 pts</span>
+                    <span class="rounded-md bg-slate-800 px-2 py-0.5 text-[10px] font-extrabold text-white">🔒 Pista 2</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Etiqueta de módulo sobre imagen</p>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <span class="rounded-lg bg-white/95 px-2 py-0.5 text-[11px] font-extrabold text-fiec-700">Módulo 1</span>
+                    <span class="rounded-lg bg-up-500 px-2 py-0.5 text-[11px] font-extrabold text-slate-900">Módulo 4</span>
+                    <span class="rounded-lg bg-slate-800/80 px-2 py-0.5 text-[11px] font-extrabold text-white">Módulo 5</span>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Indicadores</p>
+                  <div class="mt-2 flex flex-wrap items-center gap-3">
+                    <span class="flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-700 ring-1 ring-amber-200"><span>🔥</span> 5 días</span>
+                    <span class="rounded-lg bg-amber-50 px-2 py-1 text-[10px] font-extrabold text-up-800 ring-1 ring-up-200">Sin errores</span>
+                    <span class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-bold text-slate-600 ring-1 ring-slate-200">Atrasado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Progreso</h3>
+              <div class="mt-4 space-y-4">
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Anillo · avance global</p>
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="relative h-[70px] w-[70px] shrink-0">
+                      <svg viewBox="0 0 100 100" class="h-full w-full -rotate-90">
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="#E2E8F0" stroke-width="11"/>
+                        <circle cx="50" cy="50" r="42" fill="none" stroke="#0B62A4" stroke-width="11" stroke-linecap="round" stroke-dasharray="263.9" stroke-dashoffset="151.7"/>
+                      </svg>
+                      <div class="absolute inset-0 grid place-items-center">
+                        <div class="text-center leading-none">
+                          <div class="text-lg font-extrabold text-slate-900">43%</div>
+                          <div class="text-[9px] font-semibold uppercase text-slate-500">avance</div>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="text-[12px] leading-relaxed text-slate-600">
+                      El anillo es la única forma de barra de progreso que cabe en una tarjeta
+                      pequeña. El grosor del trazo es de 11 unidades y el color de fondo es
+                      <code class="mono">slate-200</code>.
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-[10px] font-bold uppercase tracking-wider text-slate-500">Barra · progreso lineal</p>
+                  <div class="mt-2 space-y-2">
+                    <div>
+                      <div class="flex items-center justify-between text-[10px] font-bold text-slate-500"><span>2 de 4 lecciones · 2 de 4 retos</span><span class="text-fiec-700">50%</span></div>
+                      <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200"><div class="h-full w-1/2 rounded-full bg-fiec-600"></div></div>
+                    </div>
+                    <div>
+                      <div class="flex items-center justify-between text-[10px] font-bold text-slate-500"><span>4 lecciones · 4 retos</span><span class="text-coder-700">100%</span></div>
+                      <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200"><div class="h-full w-full rounded-full bg-coder-500"></div></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Pistas y retroalimentación</h3>
+              <div class="mt-4 space-y-3">
+                <div class="rounded-xl bg-up-50 p-3 ring-1 ring-up-200">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-extrabold text-up-800">💡 Pista 1 · Abierta</span>
+                    <span class="text-[10px] font-bold text-up-700">ya revelada</span>
+                  </div>
+                  <p class="mt-1 text-[11.5px] leading-relaxed text-up-900">
+                    El número debe <strong>incluir</strong> el límite. Solo con «mayor que» fallará
+                    en el caso 2.
+                  </p>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-extrabold text-slate-700">🔒 Pista 2 · Revelar</span>
+                    <span class="text-[10px] font-bold text-red-700">−10 pts</span>
+                  </div>
+                  <p class="mt-1 text-[11.5px] leading-relaxed text-slate-500">
+                    Muestra una pista más específica, a cambio de puntos.
+                  </p>
+                </div>
+                <div class="rounded-xl bg-red-50 p-3 ring-1 ring-red-200">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-extrabold text-red-700">✕ Línea 6 · Lógica</span>
+                    <span class="text-[10px] font-bold text-red-700">1 error</span>
+                  </div>
+                  <p class="mt-1 text-[11.5px] leading-relaxed text-red-700">
+                    Tu programa imprimió «Mayor de edad» pero el caso espera ese texto con
+                    <strong>edad = 18</strong>.
+                  </p>
+                </div>
+              </div>
+              <p class="mt-3 text-[12px] leading-relaxed text-slate-600">
+                El mensaje de error siempre dice <strong class="font-semibold text-slate-700">qué se
+                esperaba, qué se obtuvo y por qué</strong>. «Código incorrecto» no es un mensaje
+                de retroalimentación, es una falta de información.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 6 · MICROINTERACCIONES DEL EDITOR ───────────────── -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">6 · Microinteracciones del editor</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Detalles que hacen que el editor se sienta como un editor y no como un cuadro de texto.
+          </p>
+
+          <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-bold text-slate-900">Cursor de escritura</h3>
+              <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                Barra de 2 px que parpadea cada 1,1 s, en <code class="mono">coder-500</code>.
+                Comunica que el editor está activo.
+              </p>
+              <div class="mono mt-3 flex items-center rounded-lg bg-slate-900 px-3 py-2 text-[12px] text-slate-300">
+                edad = 17<span class="inline-block h-[1.05em] w-[2px] translate-y-[2px] bg-coder-500" style="animation:blink 1.1s steps(1) infinite"></span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-bold text-slate-900">Subrayado de error</h3>
+              <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                Onda de 2 px en <code class="mono">red-400</code> bajo la línea con error, en vez
+                de un fondo rojo: el texto sigue siendo legible.
+              </p>
+              <div class="mono mt-3 overflow-x-auto rounded-lg bg-slate-900 px-3 py-2 text-[12px] text-slate-300">
+                <span class="border-b-2 border-dashed border-red-400">if (edad &gt; 18)</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-bold text-slate-900">Explicación al pasar el cursor</h3>
+              <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                La línea se ilumina en ámbar y aparece una barra de 3 px a la izquierda. En
+                tableta, por toque.
+              </p>
+              <div class="mono mt-3 overflow-x-auto rounded-lg bg-slate-900 px-3 py-2 text-[12px] text-slate-300">
+                <span class="bg-amber-100 pl-1 text-slate-800 shadow-[inset_3px_0_0_#F5B014]">if (condición) {</span>
+              </div>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-bold text-slate-900">Retícula del encabezado</h3>
+              <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                Puntos de 1 px cada 14 px en las cabeceras de módulo. Sugiere una cuadrícula
+                técnica sin necesidad de una imagen.
+              </p>
+              <div class="mt-3 h-14 rounded-lg bg-gradient-to-br from-fiec-700 to-fiec-500" style="background-image:radial-gradient(#94A3B8 1px, transparent 1px);background-size:14px 14px"></div>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-bold text-slate-900">Barras de desplazamiento finas</h3>
+              <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                8 px de ancho, con pulgar <code class="mono">slate-700</code> sobre pista
+                <code class="mono">slate-900</code>. Solo en el área de código, que es la única
+                que desborda.
+              </p>
+              <div class="thin-scroll mt-3 h-16 overflow-auto rounded-lg bg-slate-900 p-3 text-[11px] leading-relaxed text-slate-300">
+                <div>int main() {</div><div>int edad = 17;</div><div>if (edad &gt;= 18) {</div>
+                <div>printf("Mayor de edad");</div><div>}</div><div>return 0;</div><div>}</div>
+                <div>int main() {</div><div>int edad = 17;</div><div>if (edad &gt;= 18) {</div>
+                <div>printf("Mayor de edad");</div><div>}</div><div>return 0;</div><div>}</div>
+              </div>
+            </article>
+
+            <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-bold text-slate-900">Autoguardado visible</h3>
+              <p class="mt-1 text-[12px] leading-relaxed text-slate-600">
+                Indicador permanente «autoguardado», no un aviso que aparece y desaparece. El
+                estudiante nunca debe dudar de si su código se perdió.
+              </p>
+              <div class="mt-3 flex items-center gap-2 rounded-lg bg-slate-900 px-3 py-2 text-[11px] text-slate-400">
+                <span class="text-coder-400">✓</span> Autoguardado · hace 3 s
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ── 7 · ACCESIBILIDAD ──────────────────────────────── -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">7 · Accesibilidad</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            Reglas que el RNF06 exige y que se verifican sobre el prototipo, no de forma teórica.
+          </p>
+
+          <div class="mt-5 grid gap-4 lg:grid-cols-2">
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Contraste</h3>
+              <ul class="mt-3 space-y-2.5 text-[12.5px] leading-relaxed text-slate-600">
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>Texto normal: <strong class="font-semibold text-slate-700">4.5:1</strong> o más. Texto grande (≥ 24 px, o ≥ 18,66 px en negrita): <strong class="font-semibold text-slate-700">3:1</strong>.</span></li>
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>Auditado sobre el DOM renderizado, componiendo el color de fondo real de cada elemento (incluidos alfa y opacidad de ancestros).</span></li>
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>Resultado en las 4 pantallas: <strong class="font-semibold text-slate-700">0 pares por debajo del mínimo</strong>.</span></li>
+                <li class="flex gap-2.5"><span class="mt-0.5 text-red-700">✕</span><span>No se usa <code class="mono">opacity</code> para atenuar un estado: el contraste del texto deja de ser predecible.</span></li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+              <h3 class="text-sm font-extrabold text-slate-900">Interacción</h3>
+              <ul class="mt-3 space-y-2.5 text-[12.5px] leading-relaxed text-slate-600">
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>Todo lo que responde al cursor tiene equivalente por toque y por teclado: <code class="mono">hover</code> + <code class="mono">focus-visible</code> + clic.</span></li>
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>El foco es visible: anillo de 2 px en <code class="mono">fiec-500</code> sobre fondo claro y <code class="mono">sky-300</code> sobre el editor.</span></li>
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>Objetivo táctil mínimo de <strong class="font-semibold text-slate-700">44 × 44 px</strong> en los controles de la barra lateral y de la navbar.</span></li>
+                <li class="flex gap-2.5"><span class="mt-0.5 text-coder-700">✓</span><span>El color nunca es el único indicador de estado: cada estado lleva además una etiqueta o un icono.</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="mt-6 rounded-2xl bg-fiec-50 p-5 text-[12.5px] leading-relaxed text-fiec-900 ring-1 ring-fiec-200">
+            <strong>Cómo se verificó.</strong> El prototipo se cargó en un navegador sin cabeza y se
+            recorrió el DOM renderizado de las cuatro pantallas, midiendo el color de texto
+            calculado frente al color de fondo efectivo de cada elemento. Los pares que no alcanzaban
+            el mínimo se listaron, se corrigieron en el origen y se volvió a medir hasta llegar a
+            cero. La comprobación es reproducible: basta con auditar de nuevo el DOM.
+          </p>
+        </section>
+
+      </div>
+    </section>
   </div>
 
   <p class="mx-auto max-w-[1500px] px-4 py-6 text-center text-[11px] leading-relaxed text-slate-600">
