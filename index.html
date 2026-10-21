@@ -16,8 +16,11 @@
           fiec:   { 50:'#EFF7FD', 100:'#D7EBFA', 200:'#AFD7F4', 300:'#7CBCE9',
                     400:'#479BDA', 500:'#1779BE', 600:'#0B62A4', 700:'#0A4F86',
                     800:'#0B406B', 900:'#0C3455' },
-          up:     { 400:'#F8C748', 500:'#F5B014', 600:'#D69400' },
-          coder:  { 500:'#10B981', 600:'#059669' }
+          up:     { 50:'#FEF9E7', 100:'#FDEBC8', 200:'#F8D98A',
+                    400:'#F8C748', 500:'#F5B014', 600:'#D69400',
+                    700:'#A16207', 800:'#854D0E', 900:'#713F12' },
+          coder:  { 100:'#D1FAE5', 200:'#A7F3D0', 300:'#6EE7B7', 400:'#34D399',
+                    500:'#10B981', 600:'#059669', 700:'#047857' }
         },
         fontFamily: {
           sans: ['Inter','system-ui','sans-serif'],
@@ -71,7 +74,7 @@
 
     <div class="ml-auto hidden items-center gap-3 text-[11px] text-slate-400 lg:flex">
       <span class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-up-500"></span>sin funcionalidad · solo diseño</span>
-      <span class="text-slate-600">|</span>
+      <span class="text-slate-400">|</span>
       <span>Avance 1 · Fase de Análisis y Planificación</span>
     </div>
   </div>
@@ -96,15 +99,15 @@
             <img src="assets/logo-fiec.png" alt="Facultad de Informática, Electrónica y Comunicación" class="h-11 w-auto">
             <div class="hidden leading-none sm:block">
               <div class="text-[17px] font-extrabold tracking-tight text-fiec-700">CodeStart <span class="text-fiec-500">FIEC</span></div>
-              <div class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-slate-400">Curso Propedéutico · Programación</div>
+              <div class="mt-0.5 text-[10px] font-medium uppercase tracking-wider text-slate-500">Curso Propedéutico · Programación</div>
             </div>
           </div>
 
           <div class="ml-auto flex items-center gap-1 sm:gap-3">
             <div class="hidden items-center gap-1 rounded-lg bg-slate-100 p-1 text-xs font-semibold md:flex">
               <span class="rounded-md bg-white px-3 py-1.5 text-fiec-700 shadow-sm">Módulos</span>
-              <span class="px-3 py-1.5 text-slate-500">Mis tareas</span>
-              <span class="px-3 py-1.5 text-slate-500">Mis medallas</span>
+              <span class="px-3 py-1.5 text-slate-600">Mis tareas</span>
+              <span class="px-3 py-1.5 text-slate-600">Mis medallas</span>
             </div>
             <div class="hidden items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1.5 text-xs font-bold text-amber-700 ring-1 ring-amber-200 sm:flex">
               <span>🔥</span> 5 días
@@ -113,7 +116,7 @@
               <div class="grid h-9 w-9 place-items-center rounded-full bg-fiec-600 text-xs font-bold text-white">JR</div>
               <div class="hidden leading-tight sm:block">
                 <div class="text-xs font-bold text-slate-700">Julieth Rojas</div>
-                <div class="text-[10px] font-medium text-slate-400">Estudiante</div>
+                <div class="text-[10px] font-medium text-slate-500">Estudiante</div>
               </div>
             </div>
           </div>
@@ -151,7 +154,7 @@
                 <div class="absolute inset-0 grid place-items-center">
                   <div class="text-center leading-none">
                     <div class="text-xl font-extrabold text-slate-900">43%</div>
-                    <div class="text-[9px] font-semibold uppercase text-slate-400">avance</div>
+                    <div class="text-[9px] font-semibold uppercase text-slate-500">avance</div>
                   </div>
                 </div>
               </div>
@@ -160,16 +163,16 @@
                 <div class="mt-0.5 text-xs text-slate-500">3 de 8 módulos completados</div>
                 <div class="mt-3 grid grid-cols-3 gap-2 text-center">
                   <div class="rounded-lg bg-slate-50 py-1.5 ring-1 ring-slate-200">
-                    <div class="text-sm font-extrabold text-up-600">🔥5</div>
-                    <div class="text-[9px] font-semibold uppercase text-slate-400">racha</div>
+                    <div class="text-sm font-extrabold text-up-700">🔥5</div>
+                    <div class="text-[9px] font-semibold uppercase text-slate-500">racha</div>
                   </div>
                   <div class="rounded-lg bg-slate-50 py-1.5 ring-1 ring-slate-200">
                     <div class="text-sm font-extrabold text-fiec-600">3</div>
-                    <div class="text-[9px] font-semibold uppercase text-slate-400">medallas</div>
+                    <div class="text-[9px] font-semibold uppercase text-slate-500">medallas</div>
                   </div>
                   <div class="rounded-lg bg-slate-50 py-1.5 ring-1 ring-slate-200">
-                    <div class="text-sm font-extrabold text-coder-500">7</div>
-                    <div class="text-[9px] font-semibold uppercase text-slate-400">retos ok</div>
+                    <div class="text-sm font-extrabold text-coder-700">7</div>
+                    <div class="text-[9px] font-semibold uppercase text-slate-500">retos ok</div>
                   </div>
                 </div>
               </div>
@@ -183,12 +186,12 @@
             <div class="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-up-500 text-lg">📌</div>
             <div class="min-w-0">
               <div class="flex flex-wrap items-center gap-2">
-                <span class="text-[10px] font-extrabold uppercase tracking-wider text-up-600">Tarea asignada por elProf. Alvin Blanco</span>
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-up-700">Tarea asignada por elProf. Alvin Blanco</span>
               </div>
               <div class="mt-0.5 text-sm font-bold text-slate-800">Módulo 4 completo + autoevaluación</div>
               <div class="mt-1 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600">
                 <span>📅 Entrega: <strong>viernes 17 de julio</strong></span>
-                <span>⏱ Falta: <strong class="text-red-500">2 días</strong></span>
+                <span>⏱ Falta: <strong class="text-red-600">2 días</strong></span>
                 <span>📊 Avance: <strong>60%</strong></span>
               </div>
             </div>
@@ -196,7 +199,7 @@
               <div class="h-2 w-full overflow-hidden rounded-full bg-amber-200">
                 <div class="h-full w-[60%] rounded-full bg-up-500"></div>
               </div>
-              <button class="mt-2 w-full rounded-lg bg-white px-3 py-1.5 text-xs font-bold text-up-600 ring-1 ring-amber-300 hover:bg-amber-100">Continuar tarea</button>
+              <button class="mt-2 w-full rounded-lg bg-white px-3 py-1.5 text-xs font-bold text-up-700 ring-1 ring-amber-300 hover:bg-amber-100">Continuar tarea</button>
             </div>
           </div>
         </div>
@@ -218,14 +221,14 @@
                 </svg>
               </div>
               <span class="absolute left-3 top-3 rounded-lg bg-white/95 px-2 py-0.5 text-[11px] font-extrabold text-fiec-700">Módulo 1</span>
-              <span class="absolute right-3 top-3 rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-white">✓ Completado</span>
+              <span class="absolute right-3 top-3 rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-slate-900">✓ Completado</span>
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-800">Introducción a la informática y al computador</h3>
               <p class="mt-1 text-[11px] text-slate-500">Hardware, software, instrucciones y memoria</p>
               <div class="mt-auto pt-3">
                 <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
-                  <span>4 lecciones · 4 retos</span><span class="text-coder-600">100%</span>
+                  <span class="text-slate-500">4 lecciones · 4 retos</span><span class="text-coder-700">100%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-full rounded-full bg-coder-500"></div>
@@ -244,14 +247,14 @@
                 </svg>
               </div>
               <span class="absolute left-3 top-3 rounded-lg bg-white/95 px-2 py-0.5 text-[11px] font-extrabold text-fiec-700">Módulo 2</span>
-              <span class="absolute right-3 top-3 rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-white">✓ Completado</span>
+              <span class="absolute right-3 top-3 rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-slate-900">✓ Completado</span>
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-800">Algoritmos</h3>
               <p class="mt-1 text-[11px] text-slate-500">Descomponer un problema en pasos · pseudocódigo</p>
               <div class="mt-auto pt-3">
                 <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
-                  <span>3 lecciones · 3 retos</span><span class="text-coder-600">100%</span>
+                  <span class="text-slate-500">3 lecciones · 3 retos</span><span class="text-coder-700">100%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-full rounded-full bg-coder-500"></div>
@@ -269,14 +272,14 @@
                 </svg>
               </div>
               <span class="absolute left-3 top-3 rounded-lg bg-white/95 px-2 py-0.5 text-[11px] font-extrabold text-fiec-700">Módulo 3</span>
-              <span class="absolute right-3 top-3 rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-white">✓ Completado</span>
+              <span class="absolute right-3 top-3 rounded-full bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-slate-900">✓ Completado</span>
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-800">De la idea al programa</h3>
               <p class="mt-1 text-[11px] text-slate-500">Compilación vs. interpretación · anatomía del código</p>
               <div class="mt-auto pt-3">
                 <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
-                  <span>4 lecciones · 5 retos</span><span class="text-coder-600">100%</span>
+                  <span class="text-slate-500">4 lecciones · 5 retos</span><span class="text-coder-700">100%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-full rounded-full bg-coder-500"></div>
@@ -324,16 +327,16 @@
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-700">Estructuras de control de flujo</h3>
-              <p class="mt-1 text-[11px] text-slate-500">Condicionales y ciclos</p>
+              <p class="mt-1 text-[11px] text-slate-700">Condicionales y ciclos</p>
               <div class="mt-auto pt-3">
-                <div class="flex items-center justify-between text-[10px] font-bold text-slate-400">
-                  <span>Completa el Módulo 4</span><span>0%</span>
+                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                  <span class="text-slate-700">Completa el Módulo 4</span><span class="text-slate-700">0%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-0 rounded-full bg-slate-400"></div>
                 </div>
               </div>
-              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-400 ring-1 ring-slate-200">Bloqueado</button>
+              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200">Bloqueado</button>
             </div>
           </article>
 
@@ -351,16 +354,16 @@
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-700">Estructuras de datos básicas</h3>
-              <p class="mt-1 text-[11px] text-slate-500">Arreglos, listas e indexación</p>
+              <p class="mt-1 text-[11px] text-slate-700">Arreglos, listas e indexación</p>
               <div class="mt-auto pt-3">
-                <div class="flex items-center justify-between text-[10px] font-bold text-slate-400">
-                  <span>Completa el Módulo 5</span><span>0%</span>
+                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                  <span class="text-slate-700">Completa el Módulo 5</span><span class="text-slate-700">0%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-0 rounded-full bg-slate-400"></div>
                 </div>
               </div>
-              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-400 ring-1 ring-slate-200">Bloqueado</button>
+              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200">Bloqueado</button>
             </div>
           </article>
 
@@ -377,16 +380,16 @@
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-700">Taller de retos integradores</h3>
-              <p class="mt-1 text-[11px] text-slate-500">Combina variables, control de flujo y arreglos</p>
+              <p class="mt-1 text-[11px] text-slate-700">Combina variables, control de flujo y arreglos</p>
               <div class="mt-auto pt-3">
-                <div class="flex items-center justify-between text-[10px] font-bold text-slate-400">
-                  <span>Requiere módulos 4–6</span><span>0%</span>
+                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                  <span class="text-slate-700">Requiere módulos 4–6</span><span class="text-slate-700">0%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-0 rounded-full bg-slate-400"></div>
                 </div>
               </div>
-              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-400 ring-1 ring-slate-200">Bloqueado</button>
+              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200">Bloqueado</button>
             </div>
           </article>
 
@@ -398,21 +401,21 @@
                   <circle cx="12" cy="9" r="6"/><path d="M8.2 14.3L7 22l5-3 5 3-1.2-7.7"/>
                 </svg>
               </div>
-              <span class="absolute left-3 top-3 rounded-lg bg-white/95 px-2 py-0.5 text-[11px] font-extrabold text-up-600">Módulo 8</span>
+              <span class="absolute left-3 top-3 rounded-lg bg-white/95 px-2 py-0.5 text-[11px] font-extrabold text-up-900">Módulo 8</span>
               <span class="absolute right-3 top-3 rounded-full bg-slate-800/80 px-2 py-0.5 text-[10px] font-extrabold text-white">🔒 Bloqueado</span>
             </div>
             <div class="flex flex-1 flex-col p-4">
               <h3 class="text-sm font-bold leading-snug text-slate-700">Evaluación formativa final</h3>
-              <p class="mt-1 text-[11px] text-slate-500">Cuestionario automatizado de los 8 módulos</p>
+              <p class="mt-1 text-[11px] text-slate-700">Cuestionario automatizado de los 8 módulos</p>
               <div class="mt-auto pt-3">
-                <div class="flex items-center justify-between text-[10px] font-bold text-slate-400">
-                  <span>Apertura: 1 de agosto</span><span>0%</span>
+                <div class="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                  <span class="text-slate-700">Apertura: 1 de agosto</span><span class="text-slate-700">0%</span>
                 </div>
                 <div class="mt-1 h-1.5 w-full overflow-hidden rounded-full bg-slate-200">
                   <div class="h-full w-0 rounded-full bg-slate-400"></div>
                 </div>
               </div>
-              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-400 ring-1 ring-slate-200">Bloqueado</button>
+              <button class="mt-3 w-full rounded-lg bg-slate-100 px-3 py-2 text-xs font-bold text-slate-700 ring-1 ring-slate-200">Bloqueado</button>
             </div>
           </article>
         </div>
@@ -428,32 +431,32 @@
               <div class="flex items-center gap-2 rounded-xl bg-up-50 px-3 py-2 ring-1 ring-up-200" title="Módulo completado">
                 <span class="text-xl">🏅</span>
                 <div class="leading-tight">
-                  <div class="text-[11px] font-extrabold text-up-600">Primer paso</div>
+                  <div class="text-[11px] font-extrabold text-up-700">Primer paso</div>
                   <div class="text-[9px] text-slate-500">Módulo 1</div>
                 </div>
               </div>
               <div class="flex items-center gap-2 rounded-xl bg-up-50 px-3 py-2 ring-1 ring-up-200" title="Sin errores">
                 <span class="text-xl">🎯</span>
                 <div class="leading-tight">
-                  <div class="text-[11px] font-extrabold text-up-600">Sin errores</div>
+                  <div class="text-[11px] font-extrabold text-up-700">Sin errores</div>
                   <div class="text-[9px] text-slate-500">5 retos al 1er intento</div>
                 </div>
               </div>
               <div class="flex items-center gap-2 rounded-xl bg-up-50 px-3 py-2 ring-1 ring-up-200" title="Racha">
                 <span class="text-xl">🔥</span>
                 <div class="leading-tight">
-                  <div class="text-[11px] font-extrabold text-up-600">Racha 5 días</div>
+                  <div class="text-[11px] font-extrabold text-up-700">Racha 5 días</div>
                   <div class="text-[9px] text-slate-500">Constancia</div>
                 </div>
               </div>
-              <button onclick="openModal()" class="rounded-xl border-2 border-dashed border-up-400 px-3 py-2 text-[11px] font-bold text-up-600 hover:bg-up-50">
+              <button onclick="openModal()" class="rounded-xl border-2 border-dashed border-up-400 px-3 py-2 text-[11px] font-bold text-up-700 hover:bg-up-50">
                 👁 Ver modal de logro
               </button>
             </div>
           </div>
         </div>
 
-        <p class="mt-6 text-center text-[11px] text-slate-400">
+        <p class="mt-6 text-center text-[11px] text-slate-500">
           RF05 / RF06 · Muro de progreso, insignias y estado de cada módulo.
         </p>
       </div>
@@ -474,7 +477,7 @@
           </div>
           <div class="ml-auto flex flex-wrap items-center gap-2">
             <div class="flex items-center gap-2 rounded-lg bg-slate-100 px-3 py-1.5 text-xs">
-              <span class="hidden font-semibold text-slate-500 sm:inline">Modo clase</span>
+              <span class="hidden font-semibold text-slate-600 sm:inline">Modo clase</span>
               <span class="relative inline-block h-5 w-9 rounded-full bg-fiec-600">
                 <span class="absolute right-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow"></span>
               </span>
@@ -489,8 +492,8 @@
       <div class="border-b border-slate-200 bg-white px-4 py-4 sm:px-6">
         <div class="mx-auto max-w-[1240px]">
           <div class="flex flex-wrap items-center gap-2 text-[11px] font-semibold text-slate-400">
-            <span>Ruta de módulos</span><span>›</span>
-            <span class="text-fiec-600">Módulo 3 · De la idea al programa</span><span>›</span>
+            <span class="text-slate-500">Ruta de módulos</span><span class="text-slate-500">›</span>
+            <span class="text-fiec-600">Módulo 3 · De la idea al programa</span><span class="text-slate-500">›</span>
             <span class="text-slate-600">Lección 2 de 4</span>
           </div>
           <h1 class="mt-1.5 text-xl font-extrabold tracking-tight text-slate-900 sm:text-2xl">
@@ -562,30 +565,30 @@
               <div class="rounded-xl bg-fiec-50 p-3 text-center ring-1 ring-fiec-100">
                 <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-fiec-600 text-[11px] font-extrabold text-white">1</div>
                 <div class="mt-1.5 text-[11px] font-extrabold text-fiec-800">Código fuente</div>
-                <div class="text-[10px] text-slate-500">Lo que escribes</div>
+                <div class="text-[10px] text-slate-600">Lo que escribes</div>
               </div>
               <div class="rounded-xl bg-amber-50 p-3 text-center ring-1 ring-amber-100">
                 <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-up-500 text-[11px] font-extrabold text-slate-900">2</div>
-                <div class="mt-1.5 text-[11px] font-extrabold text-up-600">Traducción</div>
+                <div class="mt-1.5 text-[11px] font-extrabold text-up-700">Traducción</div>
                 <div class="text-[10px] text-slate-500">Compilar / interpretar</div>
               </div>
               <div class="rounded-xl bg-emerald-50 p-3 text-center ring-1 ring-emerald-100">
-                <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-coder-500 text-[11px] font-extrabold text-white">3</div>
-                <div class="mt-1.5 text-[11px] font-extrabold text-coder-600">Memoria</div>
+                <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-coder-500 text-[11px] font-extrabold text-slate-900">3</div>
+                <div class="mt-1.5 text-[11px] font-extrabold text-coder-700">Memoria</div>
                 <div class="text-[10px] text-slate-500">Guarda los datos</div>
               </div>
               <div class="rounded-xl bg-slate-100 p-3 text-center ring-1 ring-slate-200">
                 <div class="mx-auto grid h-8 w-8 place-items-center rounded-lg bg-slate-700 text-[11px] font-extrabold text-white">4</div>
                 <div class="mt-1.5 text-[11px] font-extrabold text-slate-700">Salida</div>
-                <div class="text-[10px] text-slate-500">Lo que ves</div>
+                <div class="text-[10px] text-slate-600">Lo que ves</div>
               </div>
             </div>
             <div class="mt-2 flex items-center justify-center gap-1 text-slate-300">
-              <span class="text-[10px]">▶</span>
+              <span class="text-[10px] text-slate-500">▶</span>
               <div class="h-px flex-1 bg-slate-200"></div>
-              <span class="text-[10px] font-semibold text-slate-400">animación SVG (CSS)</span>
+              <span class="text-[10px] font-semibold text-slate-500">animación SVG (CSS)</span>
               <div class="h-px flex-1 bg-slate-200"></div>
-              <span class="text-[10px]">▶</span>
+              <span class="text-[10px] text-slate-500">▶</span>
             </div>
           </article>
 
@@ -597,13 +600,13 @@
             </div>
             <p class="mt-1 text-[11px] text-slate-500">La memoria como casilleros numerados. Estado actual: <code class="mono rounded bg-slate-100 px-1 text-[10px] text-slate-700">edad = 17</code></p>
             <div class="mt-3 grid grid-cols-4 gap-1.5">
-              <div class="rounded-lg border-2 border-dashed border-slate-200 p-2 text-center text-[10px] font-semibold text-slate-300">0</div>
-              <div class="rounded-lg border-2 border-dashed border-slate-200 p-2 text-center text-[10px] font-semibold text-slate-300">1</div>
-              <div class="rounded-lg border-2 border-dashed border-slate-200 p-2 text-center text-[10px] font-semibold text-slate-300">2</div>
+              <div class="rounded-lg border-2 border-dashed border-slate-200 p-2 text-center text-[10px] font-semibold text-slate-500">0</div>
+              <div class="rounded-lg border-2 border-dashed border-slate-200 p-2 text-center text-[10px] font-semibold text-slate-500">1</div>
+              <div class="rounded-lg border-2 border-dashed border-slate-200 p-2 text-center text-[10px] font-semibold text-slate-500">2</div>
               <div class="rounded-lg border-2 border-fiec-500 bg-fiec-50 p-2 text-center shadow-sm">
-                <div class="text-[9px] font-bold text-fiec-500">3 · edad</div>
+                <div class="text-[9px] font-bold text-fiec-600">3 · edad</div>
                 <div class="mono text-sm font-bold text-fiec-800">17</div>
-                <div class="text-[9px] font-semibold text-fiec-500">int</div>
+                <div class="text-[9px] font-semibold text-fiec-600">int</div>
               </div>
             </div>
             <div class="mt-3 flex flex-wrap gap-1.5">
@@ -621,33 +624,33 @@
               <span class="rounded-md bg-slate-900 px-2 py-0.5 text-[10px] font-bold text-white">hola_mundo.c</span>
             </div>
             <p class="mt-1 text-[11px] text-slate-500">
-              <span class="font-bold text-up-600">Pasa el cursor sobre cada línea</span> para descubrir qué hace.
+              <span class="font-bold text-up-700">Pasa el cursor sobre cada línea</span> para descubrir qué hace.
             </p>
 
-            <div class="mono mt-3 overflow-x-auto rounded-xl bg-slate-900 py-3 text-[12px] leading-[1.9] shadow-lg ring-1 ring-slate-800 thin-scroll">
+            <div class="mono mt-3 overflow-x-auto rounded-xl bg-slate-900 py-3 text-[12px] leading-[1.9] text-slate-300 shadow-lg ring-1 ring-slate-800 thin-scroll">
               <div class="anat-line flex gap-3 px-3">
-                <span class="w-4 shrink-0 select-none text-right text-slate-600">1</span>
-                <span><span class="text-slate-500">#include</span> <span class="text-amber-300">&lt;stdio.h&gt;</span></span>
+                <span class="w-4 shrink-0 select-none text-right text-slate-400">1</span>
+                <span><span class="text-slate-300">#include</span> <span class="text-amber-300">&lt;stdio.h&gt;</span></span>
               </div>
               <div class="anat-line flex gap-3 px-3">
-                <span class="w-4 shrink-0 select-none text-right text-slate-600">2</span>
+                <span class="w-4 shrink-0 select-none text-right text-slate-400">2</span>
                 <span><span class="text-sky-300">int</span> <span class="text-emerald-300">main</span>() {</span>
               </div>
               <div class="anat-line flex gap-3 px-3">
-                <span class="w-4 shrink-0 select-none text-right text-slate-600">3</span>
+                <span class="w-4 shrink-0 select-none text-right text-slate-400">3</span>
                 <span class="pl-4"><span class="text-sky-300">printf</span>(<span class="text-emerald-300">"Hola Mundo"</span>);</span>
               </div>
               <div class="anat-line flex gap-3 px-3">
-                <span class="w-4 shrink-0 select-none text-right text-slate-600">4</span>
+                <span class="w-4 shrink-0 select-none text-right text-slate-400">4</span>
                 <span class="pl-4"><span class="text-sky-300">return</span> <span class="text-orange-300">0</span>;</span>
               </div>
               <div class="anat-line flex gap-3 px-3">
-                <span class="w-4 shrink-0 select-none text-right text-slate-600">5</span>
+                <span class="w-4 shrink-0 select-none text-right text-slate-400">5</span>
                 <span>}</span>
               </div>
             </div>
 
-            <p class="mt-2 text-[10px] text-slate-400">
+            <p class="mt-2 text-[10px] text-slate-500">
               * Lenguaje de ejemplo (C) — el definitivo lo define el docente del propedéutico (secc. 15.3).
             </p>
 
@@ -745,7 +748,7 @@
             <div class="thin-scroll max-h-[420px] overflow-y-auto p-5 lg:max-h-[700px]">
               <div class="flex items-center gap-2">
                 <span class="rounded-md bg-fiec-100 px-2 py-0.5 text-[10px] font-extrabold text-fiec-700">RETO 2 DE 4</span>
-                <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-500">+40 pts</span>
+                <span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">+40 pts</span>
               </div>
               <h2 class="mt-2 text-base font-extrabold leading-snug text-slate-900">Clasifica la edad con un condicional</h2>
               <p class="mt-2 text-[13px] leading-relaxed text-slate-600">
@@ -756,8 +759,8 @@
               <div class="mt-4 rounded-xl bg-slate-50 p-3.5 ring-1 ring-slate-200">
                 <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Ejemplo</div>
                 <div class="mt-1.5 space-y-0.5 text-[11px] text-slate-600">
-                  <div><span class="font-bold text-slate-700">Entrada:</span> edad = 20 → <span class="font-mono text-coder-600">"Mayor de edad"</span></div>
-                  <div><span class="font-bold text-slate-700">Entrada:</span> edad = 15 → <span class="font-mono text-coder-600">"Menor de edad"</span></div>
+                  <div><span class="font-bold text-slate-700">Entrada:</span> edad = 20 → <span class="font-mono text-coder-700">"Mayor de edad"</span></div>
+                  <div><span class="font-bold text-slate-700">Entrada:</span> edad = 15 → <span class="font-mono text-coder-700">"Menor de edad"</span></div>
                 </div>
               </div>
 
@@ -765,13 +768,13 @@
                 <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Casos de prueba</div>
                 <div class="mono mt-1.5 space-y-1 text-[11px]">
                   <div class="flex items-center gap-2 rounded-lg bg-emerald-50 px-2.5 py-1.5 text-emerald-800 ring-1 ring-emerald-200">
-                    <span class="font-bold">✓</span> edad = 20 <span class="text-emerald-600">→ aprobado</span>
+                    <span class="font-bold">✓</span> edad = 20 <span class="text-emerald-700">→ aprobado</span>
                   </div>
                   <div class="flex items-center gap-2 rounded-lg bg-red-50 px-2.5 py-1.5 text-red-700 ring-1 ring-red-200">
-                    <span class="font-bold">✕</span> edad = 18 <span class="text-red-500">→ falló (esperaba "Mayor")</span>
+                    <span class="font-bold">✕</span> edad = 18 <span class="text-red-700">→ falló (esperaba "Mayor")</span>
                   </div>
-                  <div class="flex items-center gap-2 rounded-lg bg-slate-100 px-2.5 py-1.5 text-slate-500 ring-1 ring-slate-200">
-                    <span class="font-bold">○</span> edad = 15 <span class="text-slate-400">→ pendiente</span>
+                  <div class="flex items-center gap-2 rounded-lg bg-slate-100 px-2.5 py-1.5 text-slate-600 ring-1 ring-slate-200">
+                    <span class="font-bold text-slate-600">○</span> edad = 15 <span class="text-slate-600">→ pendiente</span>
                   </div>
                 </div>
               </div>
@@ -781,7 +784,7 @@
                 <div class="rounded-xl border border-emerald-200 bg-emerald-50/60 p-3">
                   <div class="flex items-center gap-2">
                     <span class="text-[11px] font-extrabold text-emerald-700">💡 Pista 1 · Abierta</span>
-                    <span class="ml-auto text-[10px] font-bold text-emerald-600">ya revelada</span>
+                    <span class="ml-auto text-[10px] font-bold text-emerald-700">ya revelada</span>
                   </div>
                   <p class="mt-1.5 text-[11px] leading-relaxed text-slate-700">
                     Recuerda que el lenguaje compara con <code class="mono rounded bg-white px-1 text-[10px]">&gt;=</code> cuando quieres
@@ -793,7 +796,7 @@
                     <span class="text-[11px] font-extrabold text-slate-600">🔒 Pista 2 · Revelar</span>
                     <span class="ml-auto rounded-md bg-up-500 px-1.5 py-0.5 text-[9px] font-extrabold text-slate-900">−10 pts</span>
                   </div>
-                  <p class="mt-1 text-[10px] text-slate-400">Muestra una pista más específica.</p>
+                  <p class="mt-1 text-[10px] text-slate-500">Muestra una pista más específica.</p>
                 </div>
                 <button class="w-full rounded-xl bg-slate-900 px-3 py-2.5 text-[12px] font-extrabold text-white hover:bg-slate-800">
                   🆘 Pedir pista
@@ -810,7 +813,7 @@
                 <span class="h-1.5 w-1.5 rounded-full bg-up-500" title="guardado automático"></span>
               </div>
               <div class="rounded-t-lg px-3 py-1.5">
-                <span class="mono text-[11px] text-slate-500">casos_prueba.txt</span>
+                <span class="mono text-[11px] text-slate-300">casos_prueba.txt</span>
               </div>
               <span class="ml-auto hidden rounded-md bg-coder-500/15 px-2 py-1 text-[10px] font-bold text-coder-500 ring-1 ring-coder-500/30 sm:inline-block">
                 ✓ Autoguardado · RF11
@@ -819,25 +822,25 @@
             </div>
 
             <!-- Editor de código (CodeMirror 6) -->
-            <div class="mono thin-scroll relative flex-1 overflow-auto bg-slate-900 py-3 text-[12.5px] leading-[1.95]">
+            <div class="mono thin-scroll relative flex-1 overflow-auto bg-slate-900 py-3 text-[12.5px] leading-[1.95] text-slate-300">
               <div class="min-w-[560px]">
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">1</span><span class="text-slate-500">#include</span> <span class="text-amber-300">&lt;stdio.h&gt;</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">2</span><span></span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">3</span><span><span class="text-sky-300">int</span> <span class="text-emerald-300">main</span>() {</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">4</span><span class="pl-4"><span class="text-sky-300">int</span> edad = <span class="text-orange-300">17</span>;</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">5</span><span class="pl-4"></span></div>
-                <div class="flex bg-red-500/10 ring-1 ring-inset ring-red-500/30"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-500">6</span><span class="squiggle pl-4"><span class="text-sky-300">if</span> (edad <span class="squiggle text-orange-300">&gt;</span> <span class="text-orange-300">18</span>) {<span class="fake-caret ml-px"></span></span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">7</span><span class="pl-8"><span class="text-emerald-300">printf</span>(<span class="text-emerald-300">"Mayor de edad\n"</span>);</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">8</span><span class="pl-4">} <span class="text-sky-300">else</span> {</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">9</span><span class="pl-8"><span class="text-emerald-300">printf</span>(<span class="text-emerald-300">"Menor de edad\n"</span>);</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">10</span><span class="pl-4">}</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">11</span><span class="pl-4"><span class="text-sky-300">return</span> <span class="text-orange-300">0</span>;</span></div>
-                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-600">12</span><span>}</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">1</span><span class="text-slate-300">#include</span> <span class="text-amber-300">&lt;stdio.h&gt;</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">2</span><span></span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">3</span><span><span class="text-sky-300">int</span> <span class="text-emerald-300">main</span>() {</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">4</span><span class="pl-4"><span class="text-sky-300">int</span> edad = <span class="text-orange-300">17</span>;</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">5</span><span class="pl-4"></span></div>
+                <div class="flex bg-red-500/10 ring-1 ring-inset ring-red-500/30"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-300">6</span><span class="squiggle pl-4"><span class="text-sky-300">if</span> (edad <span class="squiggle text-orange-300">&gt;</span> <span class="text-orange-300">18</span>) {<span class="fake-caret ml-px"></span></span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">7</span><span class="pl-8"><span class="text-emerald-300">printf</span>(<span class="text-emerald-300">"Mayor de edad\n"</span>);</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">8</span><span class="pl-4">} <span class="text-sky-300">else</span> {</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">9</span><span class="pl-8"><span class="text-emerald-300">printf</span>(<span class="text-emerald-300">"Menor de edad\n"</span>);</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">10</span><span class="pl-4">}</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">11</span><span class="pl-4"><span class="text-sky-300">return</span> <span class="text-orange-300">0</span>;</span></div>
+                <div class="flex"><span class="w-11 shrink-0 select-none pr-3 text-right text-slate-400">12</span><span>}</span></div>
               </div>
 
               <!-- Popup de autocompletado (decorativo) -->
               <div class="absolute left-[330px] top-[152px] hidden w-[230px] overflow-hidden rounded-lg border border-white/10 bg-slate-800 shadow-2xl sm:block">
-                <div class="border-b border-white/10 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">Autocompletado</div>
+                <div class="border-b border-white/10 px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-300">Autocompletado</div>
                 <div class="bg-fiec-600/20 px-3 py-1.5 text-[11px] text-fiec-300">>= mayor o igual que</div>
                 <div class="px-3 py-1.5 text-[11px] text-slate-400">> mayor que</div>
                 <div class="px-3 py-1.5 text-[11px] text-slate-400">!= distinto de</div>
@@ -846,24 +849,24 @@
 
             <!-- Acciones del editor -->
             <div class="flex flex-wrap items-center gap-2 border-t border-white/5 bg-slate-800/60 px-4 py-3">
-              <button class="rounded-xl bg-coder-500 px-6 py-2.5 text-[13px] font-extrabold text-white shadow-lg shadow-coder-500/25 hover:bg-coder-600">
+              <button class="rounded-xl bg-coder-500 px-6 py-2.5 text-[13px] font-extrabold text-slate-900 shadow-lg shadow-coder-500/25 hover:bg-coder-600">
                 ▶ Verificar solución
               </button>
               <button class="rounded-xl bg-white/10 px-4 py-2.5 text-[12px] font-bold text-slate-200 hover:bg-white/20">Guardar y salir</button>
-              <span class="ml-auto text-[10px] text-slate-500">Ejecución aislada en el navegador (Web Worker) · el código no sale del equipo</span>
+              <span class="ml-auto text-[10px] text-slate-300">Ejecución aislada en el navegador (Web Worker) · el código no sale del equipo</span>
             </div>
 
             <!-- PANEL INFERIOR · Salida / Retroalimentación -->
             <div class="border-t border-white/10 bg-slate-950">
               <div class="flex flex-wrap items-center gap-1 border-b border-white/10 px-3 pt-2">
-                <button data-tab="salida" class="tab-btn rounded-t-lg px-4 py-2 text-[11px] font-bold text-slate-500 hover:text-slate-300">
+                <button data-tab="salida" class="tab-btn rounded-t-lg px-4 py-2 text-[11px] font-bold text-slate-300 hover:text-slate-300">
                   Salida
                 </button>
                 <button data-tab="retro" class="tab-btn rounded-t-lg bg-slate-900 px-4 py-2 text-[11px] font-extrabold text-white">
                   Retroalimentación
                 </button>
-                <span class="rounded-full bg-red-500 px-2 py-0.5 text-[9px] font-extrabold text-white">1 error</span>
-                <span class="ml-auto rounded-md bg-white/5 px-2 py-1 text-[10px] font-bold text-slate-500">⏱ 0.42 s</span>
+                <span class="rounded-full bg-red-600 px-2 py-0.5 text-[9px] font-extrabold text-white">1 error</span>
+                <span class="ml-auto rounded-md bg-white/5 px-2 py-1 text-[10px] font-bold text-slate-300">⏱ 0.42 s</span>
               </div>
 
               <div data-panel="salida" class="hidden mono p-4 text-[11.5px] leading-relaxed thin-scroll">
@@ -877,7 +880,7 @@
                 <!-- Error -->
                 <div class="rounded-xl border border-red-500/40 bg-red-500/10 p-3.5 ring-1 ring-red-500/20">
                   <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-md bg-red-500 px-2 py-0.5 text-[10px] font-extrabold text-white">Línea 6 · Lógica</span>
+                    <span class="rounded-md bg-red-600 px-2 py-0.5 text-[10px] font-extrabold text-white">Línea 6 · Lógica</span>
                     <span class="text-[12px] font-extrabold text-red-200">La salida no coincide con lo esperado</span>
                   </div>
                   <p class="mt-2 text-[11.5px] leading-relaxed text-red-100/90">
@@ -887,9 +890,9 @@
                     <code class="mono rounded bg-black/30 px-1">"Menor de edad"</code>.
                   </p>
                   <div class="mono mt-2 rounded-lg bg-black/40 p-2.5 text-[11px]">
-                    <div class="text-slate-500">esperado</div>
+                    <div class="text-slate-300">esperado</div>
                     <div class="text-coder-400">edad = 18  →  "Mayor de edad"</div>
-                    <div class="mt-1.5 text-slate-500">obtenido</div>
+                    <div class="mt-1.5 text-slate-300">obtenido</div>
                     <div class="text-red-400">edad = 18  →  "Menor de edad"</div>
                   </div>
                 </div>
@@ -897,7 +900,7 @@
                 <!-- Estado correcto (referencia del otro estado) -->
                 <div class="rounded-xl border border-emerald-500/30 bg-emerald-500/10 p-3.5">
                   <div class="flex flex-wrap items-center gap-2">
-                    <span class="rounded-md bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-white">Caso 1 aprobado</span>
+                    <span class="rounded-md bg-coder-500 px-2 py-0.5 text-[10px] font-extrabold text-slate-900">Caso 1 aprobado</span>
                     <span class="text-[12px] font-extrabold text-emerald-200">Salida correcta</span>
                   </div>
                   <p class="mt-1.5 text-[11.5px] text-emerald-100/80">
@@ -911,17 +914,17 @@
           <!-- PANEL DERECHO (estrecho) · Recordatorio de la lección -->
           <aside class="hidden w-[190px] shrink-0 border-l border-slate-200 bg-slate-50 p-4 xl:block">
             <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Repasa la lección</div>
-            <div class="mt-2 rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-200">
-              <div class="mono text-[10.5px] leading-relaxed text-slate-700">
-                <span class="text-sky-300 font-bold" style="color:#7DD3FC">if</span> (condición) {<br>
-                &nbsp;&nbsp;<span style="color:#6EE7B7">instrucción</span>;<br>
-                } <span style="color:#7DD3FC">else</span> {<br>
-                &nbsp;&nbsp;<span style="color:#6EE7B7">instrucción</span>;<br>
+            <div class="mt-2 rounded-xl bg-slate-900 p-3 shadow-sm ring-1 ring-slate-700">
+              <div class="mono text-[10.5px] leading-relaxed text-slate-300">
+                <span class="font-bold text-sky-300">if</span> (condición) {<br>
+                &nbsp;&nbsp;<span class="text-emerald-300">instrucción</span>;<br>
+                } <span class="text-sky-300">else</span> {<br>
+                &nbsp;&nbsp;<span class="text-emerald-300">instrucción</span>;<br>
                 }
               </div>
             </div>
             <div class="mt-3 rounded-xl bg-up-50 p-3 ring-1 ring-up-200">
-              <div class="text-[10px] font-extrabold text-up-600">📘 Atajo</div>
+              <div class="text-[10px] font-extrabold text-up-700">📘 Atajo</div>
               <p class="mt-1 text-[10.5px] leading-relaxed text-slate-600">
                 Si olvidas una llave, el editor te lo señala en la línea exacta.
               </p>
@@ -946,14 +949,14 @@
             <img src="assets/logo-fiec.png" alt="FIEC" class="h-10 w-auto">
             <div class="leading-none">
               <div class="text-[16px] font-extrabold text-fiec-700">CodeStart <span class="text-fiec-500">FIEC</span></div>
-              <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">Panel docente</div>
+              <div class="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Panel docente</div>
             </div>
           </div>
 
           <div class="ml-auto flex flex-wrap items-center gap-2">
             <!-- Selector de grupo + código de inscripción -->
             <div class="flex items-center gap-2 rounded-xl bg-slate-100 px-2 py-1.5 ring-1 ring-slate-200">
-              <span class="text-[10px] font-bold uppercase text-slate-400">Grupo</span>
+              <span class="text-[10px] font-bold uppercase text-slate-600">Grupo</span>
               <span class="text-xs font-extrabold text-slate-700">Sección 1 · Verano 2026 ▾</span>
               <div class="h-5 w-px bg-slate-300"></div>
               <span class="mono text-[11px] font-bold text-fiec-700">FIEC-V26-8QK4</span>
@@ -967,7 +970,7 @@
               <div class="grid h-9 w-9 place-items-center rounded-full bg-slate-800 text-xs font-bold text-white">AB</div>
               <div class="hidden leading-tight sm:block">
                 <div class="text-xs font-bold text-slate-700">Alvin Blanco</div>
-                <div class="text-[10px] font-medium text-slate-400">Docente</div>
+                <div class="text-[10px] font-medium text-slate-500">Docente</div>
               </div>
             </div>
           </div>
@@ -991,42 +994,42 @@
         <!-- KPIs -->
         <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-            <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Cumplimiento</div>
+            <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Cumplimiento</div>
             <div class="mt-1 flex items-end gap-2">
               <span class="text-3xl font-extrabold text-slate-900">31</span>
-              <span class="pb-1 text-xs font-bold text-slate-400">/ 42 completaron Módulo 4</span>
+              <span class="pb-1 text-xs font-bold text-slate-500">/ 42 completaron Módulo 4</span>
             </div>
             <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-200">
               <div class="h-full w-[74%] rounded-full bg-coder-500"></div>
             </div>
-            <div class="mt-1 text-[10px] font-bold text-coder-600">74% del grupo</div>
+            <div class="mt-1 text-[10px] font-bold text-coder-700">74% del grupo</div>
           </div>
           <div class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-            <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Tasa de acierto</div>
+            <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Tasa de acierto</div>
             <div class="mt-1 flex items-end gap-2">
               <span class="text-3xl font-extrabold text-slate-900">68%</span>
-              <span class="pb-1 text-xs font-bold text-red-500">▼ 6 pts</span>
+              <span class="pb-1 text-xs font-bold text-red-600">▼ 6 pts</span>
             </div>
             <div class="mt-2 h-2 overflow-hidden rounded-full bg-slate-200">
               <div class="h-full w-[68%] rounded-full bg-fiec-600"></div>
             </div>
-            <div class="mt-1 text-[10px] font-bold text-slate-400">Promedio del Módulo 4</div>
+            <div class="mt-1 text-[10px] font-bold text-slate-500">Promedio del Módulo 4</div>
           </div>
           <div class="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-            <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Atrasados</div>
+            <div class="text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Atrasados</div>
             <div class="mt-1 flex items-end gap-2">
               <span class="text-3xl font-extrabold text-red-500">5</span>
-              <span class="pb-1 text-xs font-bold text-slate-400">por fecha de entrega</span>
+              <span class="pb-1 text-xs font-bold text-slate-500">por fecha de entrega</span>
             </div>
             <div class="mt-3 flex -space-x-2">
               <div class="grid h-7 w-7 place-items-center rounded-full bg-fiec-600 text-[9px] font-bold text-white ring-2 ring-white">LM</div>
               <div class="grid h-7 w-7 place-items-center rounded-full bg-slate-500 text-[9px] font-bold text-white ring-2 ring-white">CR</div>
-              <div class="grid h-7 w-7 place-items-center rounded-full bg-slate-400 text-[9px] font-bold text-white ring-2 ring-white">+3</div>
+              <div class="grid h-7 w-7 place-items-center rounded-full bg-slate-500 text-[9px] font-bold text-white ring-2 ring-white">+3</div>
             </div>
           </div>
           <div class="rounded-2xl border border-amber-200 bg-amber-50 p-4">
-            <div class="text-[10px] font-extrabold uppercase tracking-wider text-up-600">Punto crítico</div>
-            <div class="mt-1 text-3xl font-extrabold text-up-600">60%</div>
+            <div class="text-[10px] font-extrabold uppercase tracking-wider text-up-700">Punto crítico</div>
+            <div class="mt-1 text-3xl font-extrabold text-up-700">60%</div>
             <p class="mt-1 text-[11px] leading-snug font-semibold text-slate-700">
               del grupo falló en la <strong>asignación de variables en memoria</strong> (Reto 1 del Módulo 4).
             </p>
@@ -1073,13 +1076,13 @@
                   </thead>
                   <tbody class="text-[12px]">
                     <tr class="border-t border-slate-100">
-                      <td class="px-5 py-3 text-slate-400">01</td>
+                      <td class="px-5 py-3 text-slate-500">01</td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2.5">
                           <div class="grid h-7 w-7 place-items-center rounded-full bg-fiec-600 text-[9px] font-bold text-white">JR</div>
                           <div class="leading-tight">
                             <div class="font-bold text-slate-700">Julieth Rojas</div>
-                            <div class="text-[10px] text-slate-400">2026001</div>
+                            <div class="text-[10px] text-slate-500">2026001</div>
                           </div>
                         </div>
                       </td>
@@ -1090,18 +1093,18 @@
                           <span class="text-[10px] font-bold text-slate-500">60%</span>
                         </div>
                       </td>
-                      <td class="px-3 py-3 text-slate-600">Falló · condicional <span class="text-red-500">✕</span></td>
+                      <td class="px-3 py-3 text-slate-600">Falló · condicional <span class="text-red-600">✕</span></td>
                       <td class="px-3 py-3 font-bold text-slate-600">2</td>
                       <td class="px-5 py-3 text-right"><button class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-bold text-fiec-700">Ver detalle</button></td>
                     </tr>
                     <tr class="border-t border-slate-100">
-                      <td class="px-5 py-3 text-slate-400">02</td>
+                      <td class="px-5 py-3 text-slate-500">02</td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2.5">
-                          <div class="grid h-7 w-7 place-items-center rounded-full bg-coder-500 text-[9px] font-bold text-white">LM</div>
+                          <div class="grid h-7 w-7 place-items-center rounded-full bg-coder-500 text-[9px] font-bold text-slate-900">LM</div>
                           <div class="leading-tight">
                             <div class="font-bold text-slate-700">Luis Martínez</div>
-                            <div class="text-[10px] text-slate-400">2026002</div>
+                            <div class="text-[10px] text-slate-500">2026002</div>
                           </div>
                         </div>
                       </td>
@@ -1112,62 +1115,62 @@
                           <span class="text-[10px] font-bold text-slate-500">25%</span>
                         </div>
                       </td>
-                      <td class="px-3 py-3 text-slate-400">Sin actividad hace 6 días</td>
-                      <td class="px-3 py-3 font-bold text-slate-400">1</td>
+                      <td class="px-3 py-3 text-slate-500">Sin actividad hace 6 días</td>
+                      <td class="px-3 py-3 font-bold text-slate-500">1</td>
                       <td class="px-5 py-3 text-right"><button class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-bold text-fiec-700">Ver detalle</button></td>
                     </tr>
                     <tr class="border-t border-slate-100">
-                      <td class="px-5 py-3 text-slate-400">03</td>
+                      <td class="px-5 py-3 text-slate-500">03</td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2.5">
                           <div class="grid h-7 w-7 place-items-center rounded-full bg-fiec-600 text-[9px] font-bold text-white">CR</div>
                           <div class="leading-tight">
                             <div class="font-bold text-slate-700">Camila Ríos</div>
-                            <div class="text-[10px] text-slate-400">2026003</div>
+                            <div class="text-[10px] text-slate-500">2026003</div>
                           </div>
                         </div>
                       </td>
-                      <td class="px-3 py-3"><span class="rounded-full bg-coder-100 px-2 py-1 text-[10px] font-extrabold text-coder-600">✓ Completado</span></td>
+                      <td class="px-3 py-3"><span class="rounded-full bg-coder-100 px-2 py-1 text-[10px] font-extrabold text-coder-700">✓ Completado</span></td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2">
                           <div class="h-1.5 w-16 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-full rounded-full bg-coder-500"></div></div>
                           <span class="text-[10px] font-bold text-slate-500">100%</span>
                         </div>
                       </td>
-                      <td class="px-3 py-3 text-slate-600">Aprobó · condicional <span class="text-coder-500">✓</span></td>
+                      <td class="px-3 py-3 text-slate-600">Aprobó · condicional <span class="text-coder-700">✓</span></td>
                       <td class="px-3 py-3 font-bold text-slate-600">1</td>
                       <td class="px-5 py-3 text-right"><button class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-bold text-fiec-700">Ver detalle</button></td>
                     </tr>
                     <tr class="border-t border-slate-100">
-                      <td class="px-5 py-3 text-slate-400">04</td>
+                      <td class="px-5 py-3 text-slate-500">04</td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2.5">
-                          <div class="grid h-7 w-7 place-items-center rounded-full bg-coder-500 text-[9px] font-bold text-white">AP</div>
+                          <div class="grid h-7 w-7 place-items-center rounded-full bg-coder-500 text-[9px] font-bold text-slate-900">AP</div>
                           <div class="leading-tight">
                             <div class="font-bold text-slate-700">Andrés Pérez</div>
-                            <div class="text-[10px] text-slate-400">2026004</div>
+                            <div class="text-[10px] text-slate-500">2026004</div>
                           </div>
                         </div>
                       </td>
-                      <td class="px-3 py-3"><span class="rounded-full bg-coder-100 px-2 py-1 text-[10px] font-extrabold text-coder-600">✓ Completado</span></td>
+                      <td class="px-3 py-3"><span class="rounded-full bg-coder-100 px-2 py-1 text-[10px] font-extrabold text-coder-700">✓ Completado</span></td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2">
                           <div class="h-1.5 w-16 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-full rounded-full bg-coder-500"></div></div>
                           <span class="text-[10px] font-bold text-slate-500">100%</span>
                         </div>
                       </td>
-                      <td class="px-3 py-3 text-slate-600">Aprobó · variables <span class="text-coder-500">✓</span></td>
+                      <td class="px-3 py-3 text-slate-600">Aprobó · variables <span class="text-coder-700">✓</span></td>
                       <td class="px-3 py-3 font-bold text-slate-600">1</td>
                       <td class="px-5 py-3 text-right"><button class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-bold text-fiec-700">Ver detalle</button></td>
                     </tr>
                     <tr class="border-t border-slate-100">
-                      <td class="px-5 py-3 text-slate-400">05</td>
+                      <td class="px-5 py-3 text-slate-500">05</td>
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2.5">
-                          <div class="grid h-7 w-7 place-items-center rounded-full bg-slate-400 text-[9px] font-bold text-white">SB</div>
+                          <div class="grid h-7 w-7 place-items-center rounded-full bg-slate-500 text-[9px] font-bold text-white">SB</div>
                           <div class="leading-tight">
                             <div class="font-bold text-slate-700">Sofía Bernal</div>
-                            <div class="text-[10px] text-slate-400">2026005</div>
+                            <div class="text-[10px] text-slate-500">2026005</div>
                           </div>
                         </div>
                       </td>
@@ -1175,15 +1178,15 @@
                       <td class="px-3 py-3">
                         <div class="flex items-center gap-2">
                           <div class="h-1.5 w-16 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-0"></div></div>
-                          <span class="text-[10px] font-bold text-slate-400">0%</span>
+                          <span class="text-[10px] font-bold text-slate-500">0%</span>
                         </div>
                       </td>
-                      <td class="px-3 py-3 text-slate-400">—</td>
-                      <td class="px-3 py-3 font-bold text-slate-400">0</td>
+                      <td class="px-3 py-3 text-slate-500">—</td>
+                      <td class="px-3 py-3 font-bold text-slate-500">0</td>
                       <td class="px-5 py-3 text-right"><button class="rounded-md bg-slate-100 px-2 py-1 text-[10px] font-bold text-fiec-700">Ver detalle</button></td>
                     </tr>
                     <tr class="border-t border-slate-100 bg-slate-50">
-                      <td class="px-5 py-3 text-slate-400">…</td>
+                      <td class="px-5 py-3 text-slate-500">…</td>
                       <td class="px-3 py-3 font-bold text-slate-500">37 estudiantes más</td>
                       <td colspan="4"></td>
                       <td class="px-5 py-3 text-right"><button class="rounded-md bg-white px-2.5 py-1 text-[10px] font-bold text-fiec-700 ring-1 ring-slate-300">Ver todos</button></td>
@@ -1207,24 +1210,24 @@
                 <p class="mt-0.5 text-[11px] text-slate-500">Aciertos por reto (grupo completo)</p>
                 <div class="mt-4 space-y-3.5">
                   <div>
-                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R1 · Asignación de variables</span><span class="text-red-500">40%</span></div>
+                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R1 · Asignación de variables</span><span class="text-red-600">40%</span></div>
                     <div class="mt-1 h-2.5 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[40%] rounded-full bg-red-500"></div></div>
                   </div>
                   <div>
-                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R2 · Tipos de datos</span><span class="text-amber-500">58%</span></div>
+                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R2 · Tipos de datos</span><span class="text-amber-700">58%</span></div>
                     <div class="mt-1 h-2.5 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[58%] rounded-full bg-up-500"></div></div>
                   </div>
                   <div>
-                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R3 · Operadores aritméticos</span><span class="text-coder-500">71%</span></div>
+                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R3 · Operadores aritméticos</span><span class="text-coder-700">71%</span></div>
                     <div class="mt-1 h-2.5 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[71%] rounded-full bg-coder-500"></div></div>
                   </div>
                   <div>
-                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R4 · Simulación de memoria</span><span class="text-coder-500">83%</span></div>
+                    <div class="flex justify-between text-[11px] font-bold"><span class="text-slate-600">R4 · Simulación de memoria</span><span class="text-coder-700">83%</span></div>
                     <div class="mt-1 h-2.5 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[83%] rounded-full bg-coder-500"></div></div>
                   </div>
                 </div>
                 <div class="mt-4 rounded-xl bg-red-50 p-3 ring-1 ring-red-100">
-                  <div class="text-[10px] font-extrabold uppercase tracking-wider text-red-600">Patrón de error dominante</div>
+                  <div class="text-[10px] font-extrabold uppercase tracking-wider text-red-700">Patrón de error dominante</div>
                   <p class="mt-1 text-[11.5px] leading-relaxed text-slate-700">
                     <strong>Confundieron el nombre de la variable con su valor</strong> — 25 de 42 estudiantes escribieron
                     <code class="mono rounded bg-white px-1 text-[10px]">edad = "edad";</code>
@@ -1255,13 +1258,13 @@
             <p class="mt-0.5 text-[11px] text-slate-500">Porcentaje de estudiantes que completó cada módulo</p>
             <div class="mt-6 space-y-4">
               <div><div class="flex justify-between text-[11px] font-bold"><span>Módulo 1 · Informática y computador</span><span class="text-coder-600">95%</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[95%] rounded-full bg-coder-500"></div></div></div>
-              <div><div class="flex justify-between text-[11px] font-bold"><span>Módulo 2 · Algoritmos</span><span class="text-coder-600">88%</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[88%] rounded-full bg-coder-500"></div></div></div>
+              <div><div class="flex justify-between text-[11px] font-bold"><span class="text-slate-500">Módulo 2 · Algoritmos</span><span class="text-coder-600">88%</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[88%] rounded-full bg-coder-500"></div></div></div>
               <div><div class="flex justify-between text-[11px] font-bold"><span>Módulo 3 · De la idea al programa</span><span class="text-coder-600">81%</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[81%] rounded-full bg-coder-500"></div></div></div>
               <div><div class="flex justify-between text-[11px] font-bold"><span>Módulo 4 · Variables y tipos de datos</span><span class="text-amber-600">74%</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"><div class="h-full w-[74%] rounded-full bg-up-500"></div></div></div>
-              <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span>Módulo 5 · Control de flujo</span><span class="text-slate-400">no asignado</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
+              <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span class="text-slate-500">Módulo 5 · Control de flujo</span><span class="text-slate-400">no asignado</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
               <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span>Módulo 6 · Estructuras de datos</span><span class="text-slate-400">no asignado</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
-              <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span>Módulo 7 · Taller</span><span class="text-slate-400">no asignado</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
-              <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span>Módulo 8 · Evaluación final</span><span class="text-slate-400">1 de agosto</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
+              <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span class="text-slate-500">Módulo 7 · Taller</span><span class="text-slate-400">no asignado</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
+              <div><div class="flex justify-between text-[11px] font-bold opacity-50"><span class="text-slate-500">Módulo 8 · Evaluación final</span><span class="text-slate-400">1 de agosto</span></div><div class="mt-1 h-3 overflow-hidden rounded-full bg-slate-200"></div></div>
             </div>
           </div>
         </div>
@@ -1301,7 +1304,7 @@
     </section>
   </div>
 
-  <p class="mx-auto max-w-[1500px] px-4 py-6 text-center text-[11px] leading-relaxed text-slate-500">
+  <p class="mx-auto max-w-[1500px] px-4 py-6 text-center text-[11px] leading-relaxed text-slate-600">
     Mockup de diseño · CodeStart FIEC — Universidad de Panamá, Facultad de Informática, Electrónica y Comunicación.<br>
     Tipografía: Inter (texto) + JetBrains Mono (código) · Paleta: FIEC #0B62A4 · UP #F5B014 · Éxito #10B981 · Error #EF4444.
   </p>
@@ -1314,10 +1317,10 @@
   <div class="relative w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl">
     <div class="relative bg-gradient-to-b from-up-400 to-up-500 px-6 pb-8 pt-9 text-center">
       <div class="absolute inset-x-0 bottom-0 h-1.5 bg-fiec-700"></div>
-      <span class="absolute left-4 top-3 text-lg opacity-70">🎉</span>
-      <span class="absolute right-4 top-4 text-lg opacity-70">✨</span>
-      <span class="absolute left-12 top-8 text-sm opacity-50">●</span>
-      <span class="absolute right-14 top-10 text-sm opacity-50">★</span>
+      <span class="absolute left-4 top-3 text-lg text-slate-900/60">🎉</span>
+      <span class="absolute right-4 top-4 text-lg text-slate-900/60">✨</span>
+      <span class="absolute left-12 top-8 text-sm text-slate-900/60">●</span>
+      <span class="absolute right-14 top-10 text-sm text-slate-900/60">★</span>
       <div class="relative">
       <div class="mx-auto grid h-24 w-24 place-items-center rounded-full bg-white text-5xl shadow-2xl ring-4 ring-white/50">🏅</div>
       <h3 class="mt-4 text-xl font-extrabold text-slate-900">¡Módulo 3 completado!</h3>
@@ -1327,19 +1330,19 @@
     <div class="p-6">
       <div class="grid grid-cols-3 gap-2 text-center">
         <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
-          <div class="text-lg font-extrabold text-fiec-700">+120</div><div class="text-[10px] font-bold text-slate-400">puntos</div>
+          <div class="text-lg font-extrabold text-fiec-700">+120</div><div class="text-[10px] font-bold text-slate-500">puntos</div>
         </div>
         <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
-          <div class="text-lg font-extrabold text-coder-600">5/5</div><div class="text-[10px] font-bold text-slate-400">retos</div>
+          <div class="text-lg font-extrabold text-coder-700">5/5</div><div class="text-[10px] font-bold text-slate-500">retos</div>
         </div>
         <div class="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
-          <div class="text-lg font-extrabold text-up-600">1º</div><div class="text-[10px] font-bold text-slate-400">intento</div>
+          <div class="text-lg font-extrabold text-up-700">1º</div><div class="text-[10px] font-bold text-slate-500">intento</div>
         </div>
       </div>
       <div class="mt-4 flex items-center gap-3 rounded-xl bg-up-50 p-3 ring-1 ring-up-200">
         <span class="text-2xl">🏅</span>
         <div>
-          <div class="text-[12px] font-extrabold text-up-600">Medalla desbloqueada: «Anatomía del código»</div>
+          <div class="text-[12px] font-extrabold text-up-700">Medalla desbloqueada: «Anatomía del código»</div>
           <div class="text-[10.5px] text-slate-600">Explicaste la función de cada línea del Hola Mundo.</div>
         </div>
       </div>
