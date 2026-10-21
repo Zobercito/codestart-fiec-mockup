@@ -69,7 +69,7 @@ Los pares de color permitidos y prohibidos, con su razón de contraste medida, e
 
 - **Un solo archivo, sin build.** Tailwind por CDN, JS vanilla. Se abre con doble clic o se sirve
   tal cual desde GitHub Pages.
-- **Peso:** ~200 KB en total (los logos están en `assets/`, no embebidos en base64).
+- **Peso:** ~300 KB en total (236 KB de HTML + 68 KB de logos en `assets/`, no embebidos en base64).
 - **Accesibilidad:** contraste AA verificado sobre el DOM renderizado (0 pares por debajo del
   mínimo), foco visible, e interacción de código que funciona con ratón, teclado y táctil.
 - **Responsive:** verificado a 390 px (móvil), 768 px (tableta) y 1500 px (escritorio).
