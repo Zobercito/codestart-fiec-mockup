@@ -765,7 +765,7 @@
             </div>
             <div class="h-6 w-px bg-white/10"></div>
             <div class="leading-tight">
-              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-400">Módulo 5 · Estructuras de control de flujo</div>
+              <div class="text-[10px] font-bold uppercase tracking-wider text-slate-300">Módulo 5 · Estructuras de control de flujo</div>
               <div class="text-sm font-extrabold">Reto 2 · Clasifica la edad con un condicional</div>
             </div>
             <div class="ml-auto flex flex-wrap items-center gap-2">
@@ -2339,6 +2339,305 @@
           actualizar. Al anclar cada anotación al elemento real, el documento se regenera solo. Es
           además la forma en que se puede verificar que cada requisito listado en el Avance 1 tiene
           un lugar concreto en la interfaz, que es lo que pide el calendario al entregar el avance.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <!-- DOCUMENTACIÓN DE DISEÑO · MAPA DE NAVEGACIÓN                   -->
+    <!-- ─────────────────────────────────────────────────────────── -->
+    <section id="doc-mapa" data-screen class="hidden bg-slate-50">
+      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-6">
+
+        <header class="border-b border-slate-200 pb-6">
+          <p class="text-xs font-bold uppercase tracking-wider text-fiec-600">Documentación de diseño · Avance 2</p>
+          <h1 class="mt-1 text-3xl font-extrabold tracking-tight text-slate-900">Mapa de navegación</h1>
+          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+            Rutas de los tres tipos de usuario de la plataforma, con las pantallas donde ocurre cada
+            paso. Los nodos del diagrama son enlaces: al pulsarlos se abre la pantalla real del
+            prototipo, así que el mapa y la interfaz son la misma cosa.
+          </p>
+          <div class="mt-4 flex flex-wrap items-center gap-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200 text-[11.5px]">
+            <span class="flex items-center gap-2"><span class="h-4 w-4 rounded-md border-2 border-fiec-600 bg-fiec-50"></span><span class="text-slate-600">Pantalla del prototipo</span></span>
+            <span class="flex items-center gap-2"><span class="h-4 w-4 rounded-md border-2 border-dashed border-slate-300 bg-slate-50"></span><span class="text-slate-600">Fuera del prototipo (documentado)</span></span>
+            <span class="flex items-center gap-2"><span class="rounded-md bg-up-50 px-2 py-1 font-bold text-up-800">RF</span><span class="text-slate-600">Requisito del Avance 1</span></span>
+          </div>
+        </header>
+
+        <!-- ══ FLUJO DEL ESTUDIANTE ══ -->
+        <section class="mt-8">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">Flujo del estudiante</h2>
+          <p class="mt-1 text-sm text-slate-600">Recorrido de una sesión completa, desde que entra hasta que entrega un reto.</p>
+
+          <div class="mt-5 overflow-x-auto rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <div class="flex min-w-[900px] flex-col items-center gap-2">
+              <!-- paso 1 -->
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-slate-700">Registro e inicio de sesión</span>
+                  <span class="block text-[11px] text-slate-500">correo institucional + contraseña</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF01</span>
+              </div>
+              <span class="text-slate-500">↓</span>
+              <!-- paso 2 -->
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-slate-700">Unirse al grupo con código</span>
+                  <span class="block text-[11px] text-slate-500">inscripción al grupo del docente</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF12</span>
+              </div>
+              <span class="text-slate-500">↓</span>
+
+              <!-- bifurcation -->
+              <div class="grid w-full grid-cols-3 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-fiec-600 bg-fiec-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-fiec-900">Panel del curso</span>
+                    <span class="block text-[11px] text-fiec-700">estado de los 8 módulos</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">RF02 · RF05 · RF06</span>
+                  <button onclick="showScreen('scr-dashboard',null)" class="mt-2 rounded-lg bg-fiec-600 px-3 py-1.5 text-[11px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla A →</button>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Mis tareas</span>
+                    <span class="block text-[11px] text-slate-500">pendientes del docente</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF13</span>
+                </div>
+
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Mis medallas</span>
+                    <span class="block text-[11px] text-slate-500">insignias y avance</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF06</span>
+                </div>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-fiec-600 bg-fiec-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-fiec-900">Lección del módulo</span>
+                  <span class="block text-[11px] text-fiec-700">texto, video, anatomía del código, simulador de memoria</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">RF03 · RF09 · RF16</span>
+                <button onclick="showScreen('scr-leccion',null)" class="mt-2 rounded-lg bg-fiec-600 px-3 py-1.5 text-[11px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla B →</button>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-fiec-600 bg-fiec-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-fiec-900">Reto en el editor</span>
+                  <span class="block text-[11px] text-fiec-700">escribir código, validar, usar pistas</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">RF04 · RF10 · RF11</span>
+                <button onclick="showScreen('scr-editor',null)" class="mt-2 rounded-lg bg-fiec-600 px-3 py-1.5 text-[11px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla C →</button>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="grid w-full grid-cols-3 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Autoevaluación del módulo</span>
+                    <span class="block text-[11px] text-slate-500">cuestionario con corrección inmediata</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF05</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Insignia y desbloqueo</span>
+                    <span class="block text-[11px] text-slate-500">se abre el módulo siguiente</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF06</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Evaluación final</span>
+                    <span class="block text-[11px] text-slate-500">módulo 8 · reporte de áreas a reforzar</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF05</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ FLUJO DEL DOCENTE ══ -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">Flujo del docente</h2>
+          <p class="mt-1 text-sm text-slate-600">Del grupo al informe, y del informe a la decisión de la siguiente clase.</p>
+
+          <div class="mt-5 overflow-x-auto rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <div class="flex min-w-[900px] flex-col items-center gap-2">
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-fiec-600 bg-fiec-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-fiec-900">Panel docente</span>
+                  <span class="block text-[11px] text-fiec-700">sección 1 · verano 2026</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">RF07</span>
+                <button onclick="showScreen('scr-docente',null)" class="mt-2 rounded-lg bg-fiec-600 px-3 py-1.5 text-[11px] font-bold text-white transition hover:bg-fiec-700">Abrir pantalla D →</button>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="grid w-full grid-cols-3 gap-4">
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Crear grupo</span>
+                    <span class="block text-[11px] text-slate-500">genera el código de inscripción</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF12</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Asignar módulo o reto</span>
+                    <span class="block text-[11px] text-slate-500">con fecha de entrega</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF13</span>
+                </div>
+                <div class="flex flex-col items-center">
+                  <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                    <span class="block text-[12.5px] font-bold text-slate-700">Proyectar el módulo</span>
+                    <span class="block text-[11px] text-slate-500">modo clase, sin salir del panel</span>
+                  </div>
+                  <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF16</span>
+                </div>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-fiec-600 bg-fiec-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-fiec-900">Seguimiento del grupo</span>
+                  <span class="block text-[11px] text-fiec-700">estado de cada estudiante frente a la asignación</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">RF14</span>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-fiec-600 bg-fiec-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-fiec-900">Análisis de errores</span>
+                  <span class="block text-[11px] text-fiec-700">intentos, errores frecuentes y punto crítico del grupo</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-fiec-600">RF15</span>
+              </div>
+
+              <span class="text-slate-500">↓</span>
+
+              <div class="flex flex-col items-center">
+                <div class="rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 px-4 py-2.5 text-center">
+                  <span class="block text-[12.5px] font-bold text-slate-700">Decisión del docente</span>
+                  <span class="block text-[11px] text-slate-500">qué reforzar en la siguiente clase · exportar reporte</span>
+                </div>
+                <span class="mt-0.5 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF07 · RF17 (posterior)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ ADMINISTRADOR ══ -->
+        <section class="mt-10">
+          <h2 class="text-lg font-extrabold tracking-tight text-slate-900">Administrador</h2>
+          <p class="mt-1 text-sm text-slate-600">
+            En el MVP el administrador es el equipo de desarrollo, y su trabajo se hace sobre los
+            archivos del repositorio. Por eso no hay pantalla en el prototipo.
+          </p>
+          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4">
+              <p class="text-[12.5px] font-bold text-slate-700">Gestionar usuarios y roles</p>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">Estudiante, docente y administrador. Alta y baja de cuentas.</p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF08</p>
+            </div>
+            <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4">
+              <p class="text-[12.5px] font-bold text-slate-700">Mantener los contenidos</p>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">Lecciones, retos, banco de preguntas y reglas de validación, versionados en el repositorio.</p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">RF18 (posterior)</p>
+            </div>
+            <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4">
+              <p class="text-[12.5px] font-bold text-slate-700">Aprobar propuestas del docente</p>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">El docente propone ejercicios nuevos; el administrador los revisa y los aprueba.</p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">§6.1</p>
+            </div>
+            <div class="rounded-2xl border-2 border-dashed border-slate-300 bg-white p-4">
+              <p class="text-[12.5px] font-bold text-slate-700">Mantener la plataforma</p>
+              <p class="mt-1 text-[11.5px] leading-relaxed text-slate-600">Despliegue, copias de seguridad, límites de uso de las capas gratuitas.</p>
+              <p class="mt-2 text-[10px] font-bold uppercase tracking-wider text-slate-500">§19 · §20</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ GUARDAS ══ -->
+        <section class="mt-10 grid gap-4 lg:grid-cols-2">
+          <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Guardas de acceso</h2>
+            <p class="mt-1 text-[12.5px] text-slate-600">Qué puede ver cada rol. El docente solo ve sus grupos.</p>
+            <div class="mt-4 overflow-x-auto">
+              <table class="w-full min-w-[440px] text-left text-[12px]">
+                <thead>
+                  <tr class="border-b border-slate-300">
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Acción</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estudiante</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Docente</th>
+                    <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Admin.</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Ver módulos y resolver retos</td><td class="py-1.5 pr-3 text-coder-700">Sí</td><td class="py-1.5 pr-3 text-coder-700">Sí</td><td class="py-1.5 text-coder-700">Sí</td></tr>
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Unirse a un grupo con código</td><td class="py-1.5 pr-3 text-coder-700">Sí</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 text-slate-500">No</td></tr>
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Crear y gestionar sus grupos</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 pr-3 text-coder-700">Sí</td><td class="py-1.5 text-coder-700">Sí</td></tr>
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Asignar módulos y tareas</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 pr-3 text-coder-700">Sí</td><td class="py-1.5 text-coder-700">Sí</td></tr>
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Ver resultados y errores de los estudiantes</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 pr-3 text-coder-700">Solo sus grupos</td><td class="py-1.5 text-coder-700">Sí</td></tr>
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Proponer ejercicios nuevos</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 pr-3 text-coder-700">Sí (los aprueba el admin.)</td><td class="py-1.5 text-coder-700">Sí</td></tr>
+                  <tr><td class="py-1.5 pr-3 text-slate-700">Editar contenidos desde la interfaz</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 pr-3 text-slate-500">No</td><td class="py-1.5 text-slate-500">Posterior</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
+            <h2 class="text-sm font-extrabold text-slate-900">Cobertura de requisitos</h2>
+            <p class="mt-1 text-[12.5px] text-slate-600">Qué pantalla de la interfaz cubre cada requisito del Avance 1.</p>
+            <div class="mt-4 overflow-x-auto">
+              <table class="w-full min-w-[440px] text-left text-[12px]">
+                <thead>
+                  <tr class="border-b border-slate-300">
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Req.</th>
+                    <th class="pb-2 pr-3 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Pantalla</th>
+                    <th class="pb-2 text-[10px] font-extrabold uppercase tracking-wider text-slate-500">Estado</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF01</td><td class="py-1.5 pr-3 text-slate-700">Fuera del prototipo</td><td class="py-1.5"><span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">A3</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF02 · RF05 · RF06</td><td class="py-1.5 pr-3 text-slate-700">A · Dashboard</td><td class="py-1.5"><span class="rounded-md bg-coder-100 px-2 py-0.5 text-[10px] font-bold text-coder-700">Maquetado</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF03 · RF09 · RF16</td><td class="py-1.5 pr-3 text-slate-700">B · Lección</td><td class="py-1.5"><span class="rounded-md bg-coder-100 px-2 py-0.5 text-[10px] font-bold text-coder-700">Maquetado</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF04 · RF10 · RF11</td><td class="py-1.5 pr-3 text-slate-700">C · Editor</td><td class="py-1.5"><span class="rounded-md bg-coder-100 px-2 py-0.5 text-[10px] font-bold text-coder-700">Maquetado</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF07 · RF12 · RF13 · RF14 · RF15</td><td class="py-1.5 pr-3 text-slate-700">D · Panel docente</td><td class="py-1.5"><span class="rounded-md bg-coder-100 px-2 py-0.5 text-[10px] font-bold text-coder-700">Maquetado</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF08</td><td class="py-1.5 pr-3 text-slate-700">Fuera del prototipo</td><td class="py-1.5"><span class="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] font-bold text-slate-600">A3</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF17</td><td class="py-1.5 pr-3 text-slate-700">D · exportar CSV</td><td class="py-1.5"><span class="rounded-md bg-up-50 px-2 py-0.5 text-[10px] font-bold text-up-800">Posterior</span></td></tr>
+                  <tr><td class="py-1.5 pr-3 font-bold text-fiec-700">RF18</td><td class="py-1.5 pr-3 text-slate-700">Fuera del prototipo</td><td class="py-1.5"><span class="rounded-md bg-up-50 px-2 py-0.5 text-[10px] font-bold text-up-800">Posterior</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <p class="mt-6 rounded-2xl bg-fiec-50 p-5 text-[12.5px] leading-relaxed text-fiec-900 ring-1 ring-fiec-200">
+          <strong>Decisión de diseño que el mapa deja a la vista.</strong> El estudiante y el docente
+          entran por rutas distintas pero comparten el mismo contenido: el docente proyecta la
+          lección que el estudiante está leyendo, y el panel docente y el editor de retos se
+          alimentan de la misma tabla de intentos. Por eso el editor guarda cada intento con su
+          error detectado: lo que el estudiante ve como pista y lo que el docente ve como patrón de
+          error son el mismo dato, visto desde dos lados.
         </p>
 
       </div>
