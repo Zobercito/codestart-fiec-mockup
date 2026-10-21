@@ -103,7 +103,6 @@
         <button data-go="doc-estilo"     class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">▣ Guía de estilo</button>
         <button data-go="doc-storyboard" class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">▤ Storyboard</button>
         <button data-go="doc-mapa"       class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">⌘ Mapa de navegación</button>
-        <button data-go="doc-validacion" class="scr-btn rounded-lg px-3 py-1.5 text-xs font-semibold text-slate-300 ring-1 ring-white/15 transition hover:bg-white/10">✓ Validación</button>
       </div>
     </div>
   </div>
@@ -2643,92 +2642,6 @@
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────────── -->
-    <!-- DOCUMENTACIÓN DE DISEÑO · VALIDACIÓN CON USUARIOS             -->
-    <!-- ─────────────────────────────────────────────────────────── -->
-    <section id="doc-validacion" data-screen class="hidden bg-slate-50">
-      <div class="mx-auto max-w-[1240px] px-4 py-8 sm:px-6">
-
-        <header class="border-b border-slate-200 pb-6">
-          <p class="text-xs font-bold uppercase tracking-wider text-fiec-600">Documentación de diseño · Avance 2</p>
-          <h1 class="mt-1 text-3xl font-extrabold tracking-tight text-slate-900">Validación con usuarios</h1>
-          <p class="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
-            El calendario del Avance 2 pide el prototipo <em>validado con usuarios</em>. Aquí queda
-            el protocolo: quién participa, qué hace, con qué se mide y qué se considera aprobado.
-            La prueba se ejecuta con un grupo piloto en la siguiente fase.
-          </p>
-        </header>
-
-        <!-- estado -->
-        <div class="mt-6 flex flex-wrap items-center gap-4 rounded-2xl bg-up-50 p-5 ring-1 ring-up-200">
-          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-up-500 text-lg">⏳</span>
-          <div class="min-w-0 flex-1">
-            <p class="text-sm font-extrabold text-up-900">Estado: protocolo preparado, ejecución pendiente</p>
-            <p class="mt-0.5 text-[12.5px] leading-relaxed text-up-900/90">
-              La prueba de usabilidad se realiza con el grupo piloto, después de la entrega del
-              Avance 3. Los resultados se vuelcan en la tabla de la bitácora de hallazgos, en esta
-              misma sección.
-            </p>
-          </div>
-        </div>
-
-        <!-- por qué -->
-        <section class="mt-8 grid gap-4 lg:grid-cols-3">
-          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-            <h2 class="text-sm font-extrabold text-slate-900">Por qué hay que validar</h2>
-            <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
-              El calendario del avance 2 lista «prototipo validado con usuarios» como parte del
-              entregable, y el Avance 1 fija dos criterios que solo se pueden cumplir así.
-            </p>
-            <ul class="mt-3 space-y-2 text-[12px] leading-relaxed text-slate-600">
-              <li class="rounded-lg bg-slate-50 p-2.5 ring-1 ring-slate-200">
-                <strong class="font-semibold text-slate-700">RNF04</strong> · Usabilidad: «calificación
-                promedio superior a 8/10 en encuesta de usabilidad».
-              </li>
-              <li class="rounded-lg bg-slate-50 p-2.5 ring-1 ring-slate-200">
-                <strong class="font-semibold text-slate-700">§21</strong> · Criterio de éxito
-                «Usabilidad: calificación superior a 8/10».
-              </li>
-              <li class="rounded-lg bg-slate-50 p-2.5 ring-1 ring-slate-200">
-                <strong class="font-semibold text-slate-700">§22</strong> · El prototipo no sustituye al
-                docente: la validación comprueba que refuerza su clase y no la estorba.
-              </li>
-            </ul>
-          </article>
-
-          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-            <h2 class="text-sm font-extrabold text-slate-900">Participantes</h2>
-            <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
-              Entre 5 y 8 personas. Con menos de 5 no se puede distinguir un problema de diseño de
-              un comentario aislado; con más de 8 el tiempo de la prueba deja de ser asumible para
-              el equipo de cuatro.
-            </p>
-            <ul class="mt-3 space-y-2 text-[12px] leading-relaxed text-slate-600">
-              <li class="flex gap-2"><span class="text-fiec-600">·</span><span><strong class="font-semibold text-slate-700">3-4 compañeros de equipo</strong> que no construyeron el prototipo y no lo han visto antes.</span></li>
-              <li class="flex gap-2"><span class="text-fiec-600">·</span><span><strong class="font-semibold text-slate-700">3-4 estudiantes</strong> de primer ingreso, o de otra asignatura de primer año, que nunca han usado la plataforma.</span></li>
-              <li class="flex gap-2"><span class="text-fiec-600">·</span><span><strong class="font-semibold text-slate-700">1 docente</strong> del propedéutico, que lo usará proyectado en clase. Se evalúa aparte: la prueba docente tiene criterios propios.</span></li>
-            </ul>
-            <p class="mt-3 rounded-xl bg-fiec-50 p-3 text-[11.5px] leading-relaxed text-fiec-900 ring-1 ring-fiec-200">
-              El perfil de los estudiantes debe reflejar el del grupo real: heterogéneo en
-              conocimientos previos de programación, que es la característica central del
-              problema (§2.1).
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
-            <h2 class="text-sm font-extrabold text-slate-900">Cómo se registra</h2>
-            <p class="mt-1.5 text-[12.5px] leading-relaxed text-slate-600">
-              Sesión de 25 minutos por participante, en el navegador del propio usuario (el
-              prototipo es un archivo estático, no hace falta instalar nada).
-            </p>
-            <ol class="mt-3 space-y-2 text-[12px] leading-relaxed text-slate-600">
-              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">1</span><span>Lectura del guion de la tarea, en voz alta.</span></li>
-              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">2</span><span>El participante hace la tarea sin ayuda. <strong class="font-semibold text-slate-700">No se le corrige</strong>: se anota dónde se detiene.</span></li>
-              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">3</span><span>Al terminar, se responden las preguntas de la encuesta.</span></li>
-              <li class="flex gap-2.5"><span class="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-fiec-600 text-[10px] font-extrabold text-white">4</span><span>Se registra la observación en la bitácora de hallazgos.</span></li>
-            </ol>
-          </article>
-        </section>
 
         <!-- tareas -->
         <section class="mt-10">
@@ -2951,7 +2864,7 @@
   <p class="mx-auto max-w-[1500px] px-4 py-6 text-center text-[11px] leading-relaxed text-slate-600">
     CodeStart FIEC — Avance 2: diseño instruccional e interfaz · Universidad de Panamá, Facultad de Informática, Electrónica y Comunicación.<br>
     Tipografía: Inter (texto) + JetBrains Mono (código) · Paleta: FIEC #0B62A4 · UP #F5B014 · Éxito #10B981 · Error #DC2626.<br>
-    Contraste verificado sobre el DOM renderizado: 0 pares por debajo de WCAG 2.1 AA. Guía de estilo, storyboard, mapa de navegación y protocolo de validación en las pestañas «Diseño».
+    Contraste verificado sobre el DOM renderizado: 0 pares por debajo de WCAG 2.1 AA. Guía de estilo, storyboard y mapa de navegación en las pestañas «Diseño».
   </p>
 </div>
 

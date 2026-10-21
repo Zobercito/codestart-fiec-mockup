@@ -34,7 +34,6 @@ En las pestañas **«Diseño»** de la barra superior:
 | **▣ Guía de estilo** | Tokens de color con el contraste medido, tablas de combinaciones permitidas y prohibidas, escala tipográfica, componentes base con sus estados, microinteracciones del editor y reglas de accesibilidad |
 | **▤ Storyboard** | Las 4 pantallas con objetivo, actor, precondición, datos, interacciones y estados alternos — **anotadas sobre el prototipo real**, no dibujadas aparte |
 | **⌘ Mapa de navegación** | Flujos de estudiante, docente y administrador, guardas de acceso por rol y cobertura de requisitos |
-| **✓ Validación** | Protocolo de la prueba de usabilidad: participantes, tareas, instrumento, criterios de aceptación y bitácora de hallazgos |
 
 ---
 
