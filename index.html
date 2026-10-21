@@ -682,7 +682,7 @@
             </div>
 
             <p class="mt-2 text-[10px] text-slate-500">
-              * Lenguaje de ejemplo (C) — el definitivo lo define el docente del propedéutico (secc. 15.3).
+              * Lenguaje de práctica: C, el mismo en que se programa en primer año (secc. 15.3 del Avance 1).
             </p>
 
             <!-- Tarjetas de explicación por línea -->
@@ -887,7 +887,7 @@
                 ▶ Verificar solución
               </button>
               <button class="rounded-xl bg-white/10 px-4 py-2.5 text-[12px] font-bold text-slate-200 hover:bg-white/20">Guardar y salir</button>
-              <span class="ml-auto text-[10px] text-slate-300">Ejecución aislada en el navegador (Web Worker) · el código no sale del equipo</span>
+              <span class="ml-auto text-[10px] text-slate-300">Análisis del código en el navegador (Web Worker) · el código no sale del equipo</span>
             </div>
 
             <!-- PANEL INFERIOR · Salida / Retroalimentación -->
@@ -900,11 +900,11 @@
                   Retroalimentación
                 </button>
                 <span class="rounded-full bg-red-600 px-2 py-0.5 text-[9px] font-extrabold text-white">1 error</span>
-                <span class="ml-auto rounded-md bg-white/5 px-2 py-1 text-[10px] font-bold text-slate-300">⏱ 0.42 s</span>
+                <span class="ml-auto rounded-md bg-white/5 px-2 py-1 text-[10px] font-bold text-slate-300">⏱ 12 ms</span>
               </div>
 
               <div data-panel="salida" class="hidden mono p-4 text-[11.5px] leading-relaxed thin-scroll">
-                <div class="text-slate-500">$ ejecutar solucion.c</div>
+                <div class="text-slate-500">$ analizar solucion.c</div>
                 <div class="mt-1 text-slate-200">Mayor de edad</div>
                 <div class="mt-3 text-slate-600">→ Caso 1 (edad = 20): <span class="text-coder-400">coincide</span></div>
                 <div class="text-slate-600">→ Caso 2 (edad = 18): <span class="text-red-400">no coincide</span></div>
@@ -3037,8 +3037,8 @@ const SB = {
         d:'Un video corto (2 a 4 minutos) con subtítulos en español que complementa el texto sin sustituirlo. Si el video no carga, la lección sigue siendo válida.' },
       { id:'E', a:'Anatomía de un programa', t:'Visor de anatomía', rf:'RF03',
         d:'El corazón de la lección: cada línea del programa se explica al pasar el cursor. Ataca el problema de fondo, la sintaxis que parece arbitraria.' },
-      { id:'F', a:'* Lenguaje de ejemplo', t:'Nota del lenguaje', rf:'§15.3',
-        d:'El lenguaje de ejemplo (C) es provisional: lo define el docente del propedéutico. El diseño de los retos guarda las reglas como datos, así que no depende de esa decisión.' },
+      { id:'F', a:'* Lenguaje de práctica', t:'Nota del lenguaje', rf:'§15.3',
+        d:'C es el lenguaje de práctica de la plataforma y el mismo en que se programa en primer año. Como C no se puede ejecutar en el navegador, el editor valida el reto analizando cómo está construido el programa, no compilándolo.' },
       { id:'G', a:'El recorrido de una instrucción', t:'Animación del proceso', rf:'RF03',
         d:'Código fuente, traducción, memoria y salida. Cuatro etapas que se recorren con el cursor.' },
       { id:'H', a:'Simulador de memoria', t:'Simulador de memoria', rf:'RF03',
@@ -3064,7 +3064,7 @@ const SB = {
       { id:'G', a:'Línea 6 · Lógica', t:'Diagnóstico del error', rf:'RF15',
         d:'No dice «código incorrecto»: dice qué esperaba, qué obtuvo y por qué. Este dato es el que después ve el docente en su panel.' },
       { id:'H', sel:'[data-tab="salida"]', t:'Salida y retroalimentación', rf:'RF10',
-        d:'Dos pestañas: lo que imprimió el programa y el análisis del error. La validación ocurre en el navegador, dentro de un Web Worker.' },
+        d:'Dos pestañas: la salida deducida para cada caso de prueba y el diagnóstico del error. El análisis ocurre en el navegador, dentro de un Web Worker, para que un bucle infinito no congele la página.' },
       { id:'I', a:'Repasa la lección', t:'Repaso de la lección', rf:'RF04',
         d:'El fragmento de sintaxis del reto, siempre a mano. No obliga a salir de la pantalla para recordar una regla.' }
     ],
